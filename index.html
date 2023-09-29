@@ -1,10 +1,71 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Loading...</title>
-		<meta http-equiv="refresh" content="1; url=/app" />
+<!DOCTYPE html><html data-bs-theme="dark"><head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<link href="/main.css" rel="stylesheet">
+		<script async="" src="/main.js"></script>
+		<title>Frontend test</title>
 	</head>
 	<body>
-		<p>Loading...</p>
-	</body>
-</html>
+		<div class="container-md border">
+			<h1 class="text-center">CSSWap MVP</h1>
+			<div class="d-flex justify-content-around">
+				<button id="main-btn-swap" class="btn btn-primary">Swap</button>
+				<button id="main-btn-farm" class="btn btn-primary">Farm</button>
+			</div>
+			<div id="main-content">
+
+			</div>
+		</div>
+		
+		
+		
+	
+
+<template id="ace-template-swap-component">
+	<link rel="stylesheet" href="/main.css">
+	<div class="border">
+		<slot name="title"></slot>
+		<form ace-ref="trade-input">
+			<select ,="" name="pair" class="form-select" ace-ref="dyn-select-pairs"></select>
+			<div class="input-group mb-3">
+				<input class="form-control" type="number" min="1" name="amount">
+				<input type="hidden" class="form-control" name="denom">
+				<span ace-ref="input-denom" class="input-group-text">?</span>
+				<button class="btn btn-outline-secondary" type="button" ace-ref="reverse-btn">↔️</button>
+				<span class="input-group-text" ace-ref="output-amount">?</span>
+				<span class="input-group-text" ace-ref="output-denom">?</span>
+			</div>
+			<button ace-ref="swap-btn" class="btn btn-primary" type="button">Swap</button>
+		</form>
+	</div>
+</template>
+<template id="ace-template-farm-component">
+	<link href="/main.css" rel="stylesheet">
+	<div class="border">
+		<slot name="title"><h2>SWAP</h2></slot>
+		<h3>Deposit</h3>
+		<form ace-ref="form-deposit">
+			<div class="input-group mb-3">
+				<input min="1" name="amount0" class="form-control" type="number">
+				<span class="input-group-text"><slot name="denom-token0"></slot></span>
+			</div>
+			<div class="form-text">Current balance: <slot name="balance-token0"></slot></div>
+			<div class="input-group mb-3">
+				<input name="amount1" type="number" class="form-control" min="1">
+				<span class="input-group-text"><slot name="denom-token1"></slot></span>
+			</div>
+			<div class="form-text">Current balance: <slot name="balance-token1"></slot></div>
+			<button class="btn btn-primary" ace-ref="deposit-btn">Deposit</button>
+		</form>
+		<h3>Withdraw</h3>
+		<form ace-ref="form-withdraw">
+			<div class="input-group mb-3">
+				<input min="1" name="amount" type="number" class="form-control">
+				<span class="input-group-text"><slot name="denom-lp-token"></slot></span>
+			</div>
+			<div class="form-text">Current balance: <slot name="balance-lp-token"></slot></div>
+			<button class="btn btn-primary" ace-ref="withdraw-btn">Withdraw</button>
+		</form>
+	</div>
+</template>
+</body></html>
