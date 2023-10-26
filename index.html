@@ -16,7 +16,7 @@
 					<img src="/assets/placeholder.svg">
 					<span>Swap</span>
 				</a>
-				<a id="farm-link" href="#">
+				<a href="#" id="farm-link">
 					<img src="/assets/placeholder.svg">
 					<span>Farm</span>
 				</a>
@@ -38,7 +38,7 @@
 	Connect wallet
 </template>
 <template id="ace-template-wallet-choice">
-	<img src="/assets/lazy-load.svg" ace-ref="img">
+	<img ace-ref="img" src="/assets/lazy-load.svg">
 	<span ace-ref="text">Generiwallet</span>
 </template>
 <template id="ace-template-wallet-modal">
@@ -63,12 +63,12 @@
 				<span>Balance: <span ace-ref="in-balance">❓️</span></span>
 			</div>
 			<div class="swap-coin-inputs">
-				<img src="/assets/placeholder.svg" ace-ref="in-icon" class="swap-coin-icon">
+				<img ace-ref="in-icon" class="swap-coin-icon" src="/assets/placeholder.svg">
 				<!-- Defined at runtime -->
 				<select name="in-token"></select>
-				<button disabled="" ace-ref="btn-in-max">Max</button>
-				<button ace-ref="btn-in-half" disabled="">Half</button>
-				<input type="number" name="in-amount">
+				<button ace-ref="btn-in-max" disabled="">Max</button>
+				<button disabled="" ace-ref="btn-in-half">Half</button>
+				<input name="in-amount" type="number">
 			</div>
 		</div>
 		<img src="/assets/placeholder.svg">
@@ -78,10 +78,10 @@
 				<span>Balance: <span ace-ref="out-balance">❓️</span></span>
 			</div>
 			<div class="swap-coin-inputs">
-				<img ace-ref="out-icon" class="swap-coin-icon" src="/assets/placeholder.svg">
+				<img class="swap-coin-icon" ace-ref="out-icon" src="/assets/placeholder.svg">
 				<!-- Defined at runtime -->
 				<select name="out-token"></select>
-				<input type="number" readonly="" name="out-amount">
+				<input name="out-amount" readonly="" type="number">
 			</div>
 		</div>
 		<button class="primary">Swap</button>
@@ -104,11 +104,11 @@
 		</div>
 	</div>
 	<div class="pool-search-options">
-		<button disabled="" ace-ref="all-pool-btn" class="primary">All Pools</button>
-		<button class="primary" ace-ref="my-pool-btn" disabled="">My Pools</button>
-		<input ace-ref="pool-search-text" disabled="" type="search">
+		<button class="primary" ace-ref="all-pool-btn" disabled="">All Pools</button>
+		<button disabled="" ace-ref="my-pool-btn" class="primary">My Pools</button>
+		<input disabled="" type="search" ace-ref="pool-search-text">
 	</div>
-	<div ace-ref="pool-list" class="pool-list">
+	<div class="pool-list" ace-ref="pool-list">
 		<div class="pool-list-headings">
 			<div class="pool-list-heading">
 				<!-- Quick hack to appease the grid gods -->
@@ -144,27 +144,27 @@
 	</div>
 </template>
 <template id="ace-template-farm-pool-item">
-	<button class="pool-star" disabled="" ace-ref="btn-star">⭐️</button>
+	<button class="pool-star" ace-ref="btn-star" disabled="">⭐️</button>
 	<div class="pool-stats-icons">
 		<img ace-ref="icon-token0" src="/assets/lazy-load.svg">
-		<img src="/assets/lazy-load.svg" ace-ref="icon-token1">
+		<img ace-ref="icon-token1" src="/assets/lazy-load.svg">
 	</div>
-	<div class="pool-stats-name" ace-ref="pool-name">
+	<div ace-ref="pool-name" class="pool-stats-name">
 		-
 	</div>
-	<div ace-ref="liquidity" class="pool-stat">
+	<div class="pool-stat" ace-ref="liquidity">
 		-
 	</div>
 	<div class="pool-stat" ace-ref="volume-24h">
 		-
 	</div>
-	<div ace-ref="apy" class="pool-stat">
+	<div class="pool-stat" ace-ref="apy">
 		-
 	</div>
 	<div class="pool-stat" ace-ref="deposits">
 		-
 	</div>
-	<div ace-ref="fee-rate" class="pool-stat">
+	<div class="pool-stat" ace-ref="fee-rate">
 		-
 	</div>
 	<div class="pool-stat" ace-ref="rewards">
@@ -176,14 +176,14 @@
 	<div class="farm-interact-option">
 		<div>
 			<span class="interact-option-title">Pool shares</span>
-			<span class="interact-option-text" ace-ref="deposit-txt">-</span>
+			<span ace-ref="deposit-txt" class="interact-option-text">-</span>
 		</div>
 		<button ace-ref="deposit-btn">Deposit</button>
 	</div>
 	<div class="farm-interact-option">
 		<div>
 			<span class="interact-option-title">Share value</span>
-			<span ace-ref="withdraw-txt" class="interact-option-text">-</span>
+			<span class="interact-option-text" ace-ref="withdraw-txt">-</span>
 		</div>
 		<button ace-ref="withdraw-btn">Withdraw</button>
 	</div>
@@ -209,8 +209,8 @@
 			Current balance: <span ace-ref="balance-token0"></span>
 		</div>
 		<label class="trade-amount-input">
-			<input type="number" min="1" name="amount1">
-			<span ace-ref="denom-token1" class="trade-amount-denom">Token1</span>
+			<input min="1" name="amount1" type="number">
+			<span class="trade-amount-denom" ace-ref="denom-token1">Token1</span>
 		</label>
 		<div class="trade-amount-balance">
 			Current balance: <span ace-ref="balance-token1"></span>
@@ -218,25 +218,25 @@
 
 		<h2>Recieving</h2>
 		<label class="trade-amount-input">
-			<input type="number" min="1" name="result">
-			<span class="trade-amount-denom" ace-ref="denom-result">Shares</span>
+			<input name="result" type="number" min="1">
+			<span ace-ref="denom-result" class="trade-amount-denom">Shares</span>
 		</label>
 		<div class="trade-amount-balance">
 			Current balance: <span ace-ref="balance-result"></span>
 		</div>
 		
 
-		<input type="hidden" name="pool">
+		<input name="pool" type="hidden">
 		<button class="primary trade-execute">Deposit</button>
 		<button ace-ref="btn-cancel">Cancel</button>
 	</form>
 </template>
 <template id="ace-template-farm-pool-withdraw-dialog">
 	<h1>Withdraw</h1>
-	<form method="dialog" class="dialog-trade-form" ace-ref="form">
+	<form class="dialog-trade-form" ace-ref="form" method="dialog">
 		<label class="trade-amount-input">
-			<input type="number" min="1" class="form-control" name="amount">
-			<span class="trade-amount-denom" ace-ref="denom">Shares</span>
+			<input class="form-control" min="1" type="number" name="amount">
+			<span ace-ref="denom" class="trade-amount-denom">Shares</span>
 		</label>
 		<div class="trade-amount-balance">
 			Current shares: <span ace-ref="balance"></span>
@@ -246,7 +246,7 @@
 			You recieve: <span ace-ref="trade-result">-</span>
 		</div>
 		
-		<input type="hidden" name="pool">
+		<input name="pool" type="hidden">
 		<button class="primary trade-execute">Withdraw</button>
 		<button ace-ref="btn-cancel">Cancel</button>
 	</form>
