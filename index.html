@@ -1,7 +1,7 @@
 <!DOCTYPE html><html data-bs-theme="dark"><head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="/bundles/main.css">
+		<link href="/bundles/main.css" rel="stylesheet">
 		<script async="" src="/bundles/main.js"></script>
 		<title>CrownFi Swaps</title>
 	</head>
@@ -10,28 +10,28 @@
 			<div class="header-logo">
 				<img class="crown" src="/assets/crown-logo.svg">
 				<img class="text-crown" src="/assets/logo-text/crown.svg">
-				<img src="/assets/logo-text/fi.svg" class="text-fi">
+				<img class="text-fi" src="/assets/logo-text/fi.svg">
 				<img src="/assets/logo-text/finance.svg" class="text-finance">
 			</div>
 			<div class="header-links">
-				<a href="#" id="swap-link">
-					<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="78" viewBox="0 0 78 78" height="78">
-						<path style="fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round" d="m 15,17 v 40 c 0,4.287187 2.287187,8.24871 6,10.392304 3.712813,2.143594 8.287188,2.143595 12,0 C 36.712813,65.248711 39,61.287187 39,57 V 21 c 0,-4.287187 2.287187,-8.250517 6,-10.394111 3.712813,-2.1435936 8.287188,-2.1435932 12,0 C 60.712813,12.749484 63,16.712813 63,21 v 40"></path>
+				<a id="swap-link" href="#">
+					<svg viewBox="0 0 78 78" xmlns:svg="http://www.w3.org/2000/svg" height="78" width="78" xmlns="http://www.w3.org/2000/svg">
+						<path d="m 15,17 v 40 c 0,4.287187 2.287187,8.24871 6,10.392304 3.712813,2.143594 8.287188,2.143595 12,0 C 36.712813,65.248711 39,61.287187 39,57 V 21 c 0,-4.287187 2.287187,-8.250517 6,-10.394111 3.712813,-2.1435936 8.287188,-2.1435932 12,0 C 60.712813,12.749484 63,16.712813 63,21 v 40" style="fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round"></path>
 						<path style="stroke-width:6;stroke-linecap:round;stroke-linejoin:round" d="M 6,18 H 24 L 15,8 Z"></path>
 						<path d="m 54,60 h 18 l -9,10 z" style="stroke-width:6;stroke-linecap:round;stroke-linejoin:round"></path>
 					</svg>
 					<span>Swap</span>
 				</a>
 				<a id="farm-link" href="#">
-					<svg viewBox="0 0 78 78" width="78" height="78" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-						<path ;="" style="stroke: none" d="m 3.99686,1.24258 c -4.84934,22.56018 -4.87218,34.52701 6.94727,43.66211 2.75874,2.13218 6.24891,3.28774 9.70703,3.375 -1.11201,-4.81165 -1.14404,-10.10252 0.40039,-15.08399 -2.30514,-3.41178 -4.42485,-7.06617 -7.31836,-11.85547 -0.85661,-1.41845 -0.401,-3.26275 1.01758,-4.11914 0.68103,-0.41091 1.49736,-0.53456 2.26953,-0.34375 0.77197,0.19095 1.43655,0.6806 1.84766,1.36133 2.0662,3.41995 3.67272,6.16621 5.19336,8.61133 0.91203,-1.36366 1.98305,-2.66911 3.23437,-3.89258 2.97961,-2.91327 5.79854,-5.30755 8.55664,-7.24414 C 29.74787,6.33333 14.18734,3.61293 3.99686,1.24258 Z"></path>
+					<svg width="78" height="78" viewBox="0 0 78 78" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+						<path ;="" d="m 3.99686,1.24258 c -4.84934,22.56018 -4.87218,34.52701 6.94727,43.66211 2.75874,2.13218 6.24891,3.28774 9.70703,3.375 -1.11201,-4.81165 -1.14404,-10.10252 0.40039,-15.08399 -2.30514,-3.41178 -4.42485,-7.06617 -7.31836,-11.85547 -0.85661,-1.41845 -0.401,-3.26275 1.01758,-4.11914 0.68103,-0.41091 1.49736,-0.53456 2.26953,-0.34375 0.77197,0.19095 1.43655,0.6806 1.84766,1.36133 2.0662,3.41995 3.67272,6.16621 5.19336,8.61133 0.91203,-1.36366 1.98305,-2.66911 3.23437,-3.89258 2.97961,-2.91327 5.79854,-5.30755 8.55664,-7.24414 C 29.74787,6.33333 14.18734,3.61293 3.99686,1.24258 Z" style="stroke: none"></path>
 						<path style="stroke: none" d="m 61.70976,14.68984 c -12.29326,-0.0713 -18.83565,1.42508 -30.22071,12.55664 -9.27981,9.07321 -5.96997,23.66219 1.06446,31.40821 -2.05906,4.24746 -4.0058,8.84862 -5.89454,14.08398 -0.56205,1.5587 0.24595,3.2779 1.80469,3.83984 1.55814,0.56225 3.2771,-0.24477 3.83985,-1.80273 1.64121,-4.54927 3.30534,-8.56678 5.78117,-13.61001 7.73388,-15.75375 16.76259,-26.51684 22.90437,-32.72788 1.16504,-1.17777 3.06421,-1.18826 4.24219,-0.0234 1.17907,1.16526 1.18957,3.06593 0.0234,4.24414 C 56.50804,41.50388 50.10855,50.51595 43.28589,64.18207 78.99911,69.87572 78.27213,30.8881 76.31128,14.9848 70.54287,14.9112 65.80746,14.71364 61.70972,14.68988 Z" ;=""></path>
 					</svg>
 					<span>Farm</span>
 				</a>
 			</div>
 			<div class="user-options">
-				<button class="primary" is="wallet-button"></button>
+				<button is="wallet-button" class="primary"></button>
 			</div>
 		</div>
 		<div id="main-content">
@@ -43,53 +43,56 @@
 		</div>
 	
 
-<template id="ace-template-wallet-button">
+<template id="cewt-template-wallet-button">
 	Connect wallet
 </template>
-<template id="ace-template-wallet-choice">
-	<img src="/assets/lazy-load.svg" ace-ref="img">
-	<span ace-ref="text">Generiwallet</span>
+<template id="cewt-template-wallet-choice">
+	<img src="/assets/lazy-load.svg" cewt-ref="img">
+	<span cewt-ref="text">Generiwallet</span>
 </template>
-<template id="ace-template-wallet-modal">
-	<h1 ace-ref="heading">Choose wallet</h1>
-	<select ace-ref="selected-network">
+<template id="cewt-template-wallet-modal">
+	<h1 cewt-ref="heading">Choose wallet</h1>
+	<select cewt-ref="selected-network">
 		<option value="pacific-1">Mainnet (pacific-1)</option>
 		<option value="atlantic-2">Testnet (atlantic-2)</option>
 		<option value="localsei">Localnet (localsei)</option>
 	</select>
-	<div class="wallet-choices" ace-ref="choices">
+	<div cewt-ref="choices" class="wallet-choices">
 
 	</div>
-	<button ace-ref="cancel-button">Cancel</button>
+	<button cewt-ref="cancel-button">Cancel</button>
 </template>
-<template id="ace-template-swap-component">
+<template id="cewt-template-governance-component">
+	<textarea cewt-ref="log"></textarea>
+</template>
+<template id="cewt-template-swap-component">
 	<p>
 		Hail, noble traders and crypto enthusiasts! We bid thee welcome to the grand realm of Crownfi Swaps, where the
 		art of swapping digital treasures is elevated to a level befitting kings and queens.
 	</p>
-	<form ace-ref="form" class="swap-inner">
+	<form class="swap-inner" cewt-ref="form">
 		<div class="swap-coin">
 			<div class="left-right-text">
 				<span>From</span>
-				<span>Balance: <span ace-ref="in-balance">❓️</span></span>
+				<span>Balance: <span cewt-ref="in-balance">❓️</span></span>
 			</div>
 			<div class="swap-coin-inputs">
-				<img ace-ref="in-icon" class="swap-coin-icon" src="/assets/placeholder.svg">
+				<img class="swap-coin-icon" cewt-ref="in-icon" src="/assets/placeholder.svg">
 				<!-- Defined at runtime -->
 				<select name="in-token"></select>
-				<button ace-ref="btn-in-max" disabled="">Max</button>
-				<button disabled="" ace-ref="btn-in-half">Half</button>
-				<input type="number" name="in-amount">
+				<button cewt-ref="btn-in-max" disabled="">Max</button>
+				<button disabled="" cewt-ref="btn-in-half">Half</button>
+				<input name="in-amount" type="number">
 			</div>
 		</div>
 		<img src="/assets/swaps-swords.svg">
 		<div class="swap-coin">
 			<div class="left-right-text">
 				<span>To</span>
-				<span>Balance: <span ace-ref="out-balance">❓️</span></span>
+				<span>Balance: <span cewt-ref="out-balance">❓️</span></span>
 			</div>
 			<div class="swap-coin-inputs">
-				<img src="/assets/placeholder.svg" class="swap-coin-icon" ace-ref="out-icon">
+				<img cewt-ref="out-icon" class="swap-coin-icon" src="/assets/placeholder.svg">
 				<!-- Defined at runtime -->
 				<select name="out-token"></select>
 				<input type="number" name="out-amount" readonly="">
@@ -97,30 +100,30 @@
 		</div>
 		<button class="primary">Swap</button>
 	</form>
-	<img class="seal" src="/assets/seal.svg">
+	<img src="/assets/seal.svg" class="seal">
 </template>
-<template id="ace-template-farm-pool-component">
+<template id="cewt-template-farm-pool-component">
 	<div class="big-chests">
 		<!-- Padding bottom 50% ? -->
 		<div>
 			CrownFi TVL:<br>
-			<span ace-ref="big-chest-tvl">// TODO</span>
+			<span cewt-ref="big-chest-tvl">// TODO</span>
 		</div>
 		<div>
 			Total Volume Traded:<br>
-			<span ace-ref="big-chest-total-traded">// TODO</span>
+			<span cewt-ref="big-chest-total-traded">// TODO</span>
 		</div>
 		<div>
 			24H Volume:<br>
-			<span ace-ref="big-chest-volume-24h">// TODO</span>
+			<span cewt-ref="big-chest-volume-24h">// TODO</span>
 		</div>
 	</div>
 	<div class="pool-search-options">
-		<button disabled="" class="primary" ace-ref="all-pool-btn">All Pools</button>
-		<button ace-ref="my-pool-btn" class="primary" disabled="">My Pools</button>
-		<input disabled="" ace-ref="pool-search-text" class="primary" type="search">
+		<button disabled="" class="primary" cewt-ref="all-pool-btn">All Pools</button>
+		<button cewt-ref="my-pool-btn" class="primary" disabled="">My Pools</button>
+		<input class="primary" type="search" cewt-ref="pool-search-text" disabled="">
 	</div>
-	<div ace-ref="pool-list" class="pool-list">
+	<div class="pool-list" cewt-ref="pool-list">
 		<div class="pool-list-headings">
 			<div class="pool-list-heading">
 				<!-- Quick hack to appease the grid gods -->
@@ -155,123 +158,123 @@
 		</div>
 	</div>
 </template>
-<template id="ace-template-farm-pool-item">
-	<button disabled="" class="pool-star" ace-ref="btn-star"></button>
+<template id="cewt-template-farm-pool-item">
+	<button cewt-ref="btn-star" disabled="" class="pool-star"></button>
 	<div class="pool-stats-icons">
-		<img src="/assets/lazy-load.svg" ace-ref="icon-token0">
-		<img src="/assets/lazy-load.svg" ace-ref="icon-token1">
+		<img cewt-ref="icon-token0" src="/assets/lazy-load.svg">
+		<img cewt-ref="icon-token1" src="/assets/lazy-load.svg">
 	</div>
-	<div class="pool-stats-name" ace-ref="pool-name">
+	<div class="pool-stats-name" cewt-ref="pool-name">
+		⏳
+	</div>
+	<div class="pool-stat" cewt-ref="total-deposits">
+		⏳
+	</div>
+	<div class="pool-stat" cewt-ref="volume-24h">
 		// TODO
 	</div>
-	<div ace-ref="total-deposits" class="pool-stat">
+	<div cewt-ref="fee-rate" class="pool-stat">
+		⏳
+	</div>
+	<div cewt-ref="apy" class="pool-stat">
 		// TODO
 	</div>
-	<div ace-ref="volume-24h" class="pool-stat">
+	<div cewt-ref="user-deposits" class="pool-stat">
 		// TODO
 	</div>
-	<div class="pool-stat" ace-ref="fee-rate">
+	<div class="pool-stat" cewt-ref="user-net">
 		// TODO
 	</div>
-	<div ace-ref="apy" class="pool-stat">
-		// TODO
-	</div>
-	<div ace-ref="user-deposits" class="pool-stat">
-		// TODO
-	</div>
-	<div class="pool-stat" ace-ref="user-net">
-		// TODO
-	</div>
-	<button class="pool-expand" ace-ref="btn-expand"></button>
+	<button cewt-ref="btn-expand" class="pool-expand"></button>
 </template>
-<template id="ace-template-farm-pool-item-options">
+<template id="cewt-template-farm-pool-item-options">
 	<div class="farm-interact-option">
 		<div>
 			<span class="interact-option-title">Pool shares</span>
-			<span ace-ref="deposit-txt" class="interact-option-text">-</span>
+			<span cewt-ref="deposit-txt" class="interact-option-text">-</span>
 		</div>
-		<button ace-ref="deposit-btn">Deposit</button>
+		<button cewt-ref="deposit-btn">Deposit</button>
 	</div>
 	<div class="farm-interact-option">
 		<div>
 			<span class="interact-option-title">Share value</span>
-			<span class="interact-option-text" ace-ref="withdraw-txt">-</span>
+			<span class="interact-option-text" cewt-ref="withdraw-txt">-</span>
 		</div>
-		<button ace-ref="withdraw-btn">Withdraw</button>
+		<button cewt-ref="withdraw-btn">Withdraw</button>
 	</div>
 	<!--
 	<div class="farm-interact-option">
 		<div>
 			<span class="interact-option-title">Rewards</span>
-			<span ace-ref="claim-txt" class="interact-option-text">-</span>
+			<span cewt-ref="claim-txt" class="interact-option-text">-</span>
 		</div>
-		<button ace-ref="claim-btn">Claim</button>
+		<button cewt-ref="claim-btn">Claim</button>
 	</div>
 	-->
 </template>
-<template id="ace-template-farm-pool-deposit-dialog">
+<template id="cewt-template-farm-pool-deposit-dialog">
 	<h1>Deposit</h1>
-	<form class="dialog-trade-form" ace-ref="form" method="dialog">
+	<form method="dialog" cewt-ref="form" class="dialog-trade-form">
 		<h2>Spending:</h2>
 		<label class="trade-amount-input">
-			<input min="1" type="number" name="amount0">
-			<span class="trade-amount-denom" ace-ref="denom-token0">Token0</span>
+			<input name="amount0" type="number" min="1">
+			<span class="trade-amount-denom" cewt-ref="denom-token0">Token0</span>
 		</label>
 		<div class="trade-amount-balance">
-			Current balance: <span ace-ref="balance-token0"></span>
+			Current balance: <span cewt-ref="balance-token0"></span>
 		</div>
 		<label class="trade-amount-input">
-			<input min="1" name="amount1" type="number">
-			<span ace-ref="denom-token1" class="trade-amount-denom">Token1</span>
+			<input type="number" name="amount1" min="1">
+			<span class="trade-amount-denom" cewt-ref="denom-token1">Token1</span>
 		</label>
 		<div class="trade-amount-balance">
-			Current balance: <span ace-ref="balance-token1"></span>
+			Current balance: <span cewt-ref="balance-token1"></span>
 		</div>
 
 		<h2>Recieving</h2>
 		<label class="trade-amount-input">
-			<input type="number" name="result" min="1">
-			<span class="trade-amount-denom" ace-ref="denom-result">Shares</span>
+			<input type="number" min="1" name="result">
+			<span cewt-ref="denom-result" class="trade-amount-denom">Shares</span>
 		</label>
 		<div class="trade-amount-balance">
-			Current balance: <span ace-ref="balance-result"></span>
+			Current balance: <span cewt-ref="balance-result"></span>
 		</div>
 		
 
-		<input type="hidden" name="pool">
+		<input name="pool" type="hidden">
 		<button class="primary trade-execute">Deposit</button>
-		<button ace-ref="btn-cancel">Cancel</button>
+		<button cewt-ref="btn-cancel">Cancel</button>
 	</form>
 </template>
-<template id="ace-template-farm-pool-withdraw-dialog">
+<template id="cewt-template-farm-pool-withdraw-dialog">
 	<h1>Withdraw</h1>
-	<form class="dialog-trade-form" ace-ref="form" method="dialog">
+	<form cewt-ref="form" class="dialog-trade-form" method="dialog">
 		<label class="trade-amount-input">
-			<input min="1" type="number" name="amount" class="form-control">
-			<span class="trade-amount-denom" ace-ref="denom">Shares</span>
+			<input min="1" type="number" class="form-control" name="amount">
+			<span class="trade-amount-denom" cewt-ref="denom">Shares</span>
 		</label>
 		<div class="trade-amount-balance">
-			Current shares: <span ace-ref="balance"></span>
+			Current shares: <span cewt-ref="balance"></span>
 		</div>
 
 		<div class="trade-result">
-			You recieve: <span ace-ref="trade-result">-</span>
+			You recieve: <span cewt-ref="trade-result">-</span>
 		</div>
 		
 		<input type="hidden" name="pool">
 		<button class="primary trade-execute">Withdraw</button>
-		<button ace-ref="btn-cancel">Cancel</button>
+		<button cewt-ref="btn-cancel">Cancel</button>
 	</form>
 </template>
-<template id="ace-template-popup-modal">
-	<h1 ace-ref="heading">null</h1>
-	<p ace-ref="message">null</p>
-	<button ace-ref="dismiss-btn">OK</button>
+<template id="cewt-template-popup-modal">
+	<h1 cewt-ref="heading">null</h1>
+	<p cewt-ref="message">null</p>
+	<button cewt-ref="dismiss-btn">OK</button>
 </template>
-<template id="ace-template-error-modal">
-	<h1 ace-ref="heading">null</h1>
-	<p ace-ref="message">null</p>
-	<textarea readonly="" ace-ref="error-details"></textarea>
-	<button ace-ref="dismiss-btn">OK</button>
+<template id="cewt-template-error-modal">
+	<h1 cewt-ref="heading">null</h1>
+	<p cewt-ref="message">null</p>
+	<textarea cewt-ref="error-details" readonly=""></textarea>
+	<button cewt-ref="dismiss-btn">OK</button>
 </template>
 </body></html>
