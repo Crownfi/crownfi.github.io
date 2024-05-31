@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>CrownFi element zoooooooooooo</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script async src="../dist/css-gothic-fantasy.dist.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", (ev) => {
+				document.documentElement.classList.toggle(
+					"fancy-background",
+					window.enable_fancy_background_check.checked
+				);
+			});
+		</script>
+		<link rel="stylesheet" href="../styles/index.css">
+		<style>
+			.test-boxes {
+				width: 280px;
+				height: 280px;
+				margin: 8px;
+				display: inline-flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
+				box-sizing: border-box;
+			}
+			.test-boxes::before {
+				content: "280px * 280px";
+			}
+			.test-crowndings {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+			.test-crowndings > div,
+			.test-crowndings-icon {
+				margin: 2px;
+				padding: 6px;
+				border: 1px dashed white;
+				text-align: center;
+				display: inline-flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.thing-showcase {
+				margin: 8px auto;
+				max-width: 800px;
+			}
+			.example-right-side-radio {
+				width: min-content;
+				text-wrap: nowrap;
+				margin: 8px 0px;
+			}
+			.example-right-side-radio label {
+				margin: 2px 0px;
+				justify-content: space-between;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="main-navbar">
+			<div>
+				<a href="#">
+					<img class="main-navbar-logo">
+				</a>
+				<label class="navbar-toggle"><input type="checkbox"></label>
+			</div>
+			<menu>
+				<hr>
+				<li>
+					<a href="#">Lorem</a>
+				</li>
+				<li>
+					<a href="#">Ipsum</a>
+				</li>
+				<li>
+					<a href="#">Dolor</a>
+				</li>
+				<li>
+					<a href="#" class="button medium">Sit amet</a>
+				</li>
+			</menu>
+		</nav>
+		<label style="float: right;">
+			Enable fancy background
+			<input
+				id="enable_fancy_background_check"
+				oninput="
+					document.documentElement.classList.toggle(
+						'fancy-background',
+						window.enable_fancy_background_check.checked
+					)
+				"
+				type="checkbox"
+			>
+		</label>
+		<h1 class="text-primary">Primary Heading 1</h1>
+		<h1>Heading 1</h1>
+		<h2>Heading 2</h2>
+		<h3>Heading 3</h3>
+		<h4>Heading 4</h4>
+		<h5>Heading 5</h5>
+		<h6>Heading 6</h6>
+		<h1 class="text-fantasy text-primary">Fantasy Primary Heading 1</h1>
+		<h1 class="text-fantasy">Fantasy Heading 1</h1>
+		<h2 class="text-fantasy">Fantasy Heading 2</h2>
+		<h3 class="text-fantasy">Fantasy Heading 3</h3>
+		<h4 class="text-fantasy">Fantasy Heading 4</h4>
+		<h5 class="text-fantasy">Fantasy Heading 5</h5>
+		<h6 class="text-fantasy">Fantasy Heading 6</h6>
+		<h3>Normal text sample</h3>
+		<!-- Yes, I'm using implicit paragraph closing rules, don't @ me. -->
+		<p>A normal paragraph with <em>emphasized</em>, <strong>strong</strong>, and <em><strong>overwhelming</strong></em> text.
+		<p><span class="text-primary">Lorem ipsum dolor sit amet</span>, consectetur adipiscing elit. Nam facilisis purus non enim mattis rhoncus. Integer imperdiet justo a ex euismod tempus. In hac habitasse platea dictumst. Nulla auctor ligula vitae posuere cursus. Praesent vel facilisis mi, sit amet efficitur felis. Maecenas commodo sem lacus, at hendrerit magna volutpat ac. Fusce varius magna a sapien suscipit feugiat.
+		<p>Duis consequat eu lacus rhoncus ornare. Nullam vel tempor nibh. Maecenas rutrum erat sed libero dapibus malesuada. Curabitur erat odio, condimentum ac pellentesque sed, facilisis vel lorem. Vivamus consectetur est quis nulla facilisis vestibulum. Vivamus non metus at lectus malesuada vehicula nec id tellus. Praesent efficitur placerat purus quis rutrum. Nam elit leo, pharetra efficitur dignissim id, rutrum vitae ipsum. Cras sollicitudin faucibus blandit. Aliquam nibh diam, volutpat et porta a, commodo in quam. Aenean bibendum eleifend sollicitudin. Suspendisse dictum est eu massa tincidunt ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi ullamcorper felis nec nisl hendrerit, ut rhoncus dui porttitor. Nunc rutrum porta felis, ut hendrerit risus lobortis dapibus.
+		<p>Donec vehicula maximus augue sit amet aliquet. Donec lobortis magna sed risus lobortis iaculis. Praesent pulvinar facilisis libero non ornare. Sed ante elit, venenatis volutpat mi eu, dictum egestas enim. Proin sodales eu orci quis vulputate. Ut libero mi, rutrum in magna ac, pharetra finibus lectus. In pellentesque dolor sit amet velit elementum, blandit cursus libero posuere. Cras tristique facilisis massa id fringilla. </p>
+		<div class="text-fantasy">
+			<h3>Fantasy text sample</h3>
+			<p>A text-fantasy paragraph with <em>emphasized</em>, <strong>strong</strong>, and <em><strong>overwhelming</strong></em> text. 
+			<p><span class="text-primary">Lorem ipsum dolor sit amet</span>, consectetur adipiscing elit. Nam facilisis purus non enim mattis rhoncus. Integer imperdiet justo a ex euismod tempus. In hac habitasse platea dictumst. Nulla auctor ligula vitae posuere cursus. Praesent vel facilisis mi, sit amet efficitur felis. Maecenas commodo sem lacus, at hendrerit magna volutpat ac. Fusce varius magna a sapien suscipit feugiat.
+			<p>Duis consequat eu lacus rhoncus ornare. Nullam vel tempor nibh. Maecenas rutrum erat sed libero dapibus malesuada. Curabitur erat odio, condimentum ac pellentesque sed, facilisis vel lorem. Vivamus consectetur est quis nulla facilisis vestibulum. Vivamus non metus at lectus malesuada vehicula nec id tellus. Praesent efficitur placerat purus quis rutrum. Nam elit leo, pharetra efficitur dignissim id, rutrum vitae ipsum. Cras sollicitudin faucibus blandit. Aliquam nibh diam, volutpat et porta a, commodo in quam. Aenean bibendum eleifend sollicitudin. Suspendisse dictum est eu massa tincidunt ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi ullamcorper felis nec nisl hendrerit, ut rhoncus dui porttitor. Nunc rutrum porta felis, ut hendrerit risus lobortis dapibus.
+			<p>Donec vehicula maximus augue sit amet aliquet. Donec lobortis magna sed risus lobortis iaculis. Praesent pulvinar facilisis libero non ornare. Sed ante elit, venenatis volutpat mi eu, dictum egestas enim. Proin sodales eu orci quis vulputate. Ut libero mi, rutrum in magna ac, pharetra finibus lectus. In pellentesque dolor sit amet velit elementum, blandit cursus libero posuere. Cras tristique facilisis massa id fringilla. </p>
+			
+		</div>
+				
+		<p>Note that the text-fantasy font <strong class="text-primary">does not</strong> have a proper font-weight definition. Bold text will look fugly as a result.</p>
+		<h2 id="section_boxes">Generic containers<sup>[<a href="#section_boxes">#</a>]</sup></h2>
+		<p>Applying the classes shown below will do this</p>
+		<div class="test-boxes framed-box-smooth">*.framed-box-smooth</div>
+		<div class="test-boxes framed-box-small-smooth">*.framed-box-small-smooth</div>
+		<div class="test-boxes framed-box">*.framed-box</div>
+		<div class="test-boxes framed-box-small">*.framed-box-small</div>
+		<div class="test-boxes rounded-box-smooth">*.rounded-box-smooth</div>
+		<div class="test-boxes rounded-box">*.rounded-box</div>
+
+		<div class="thing-showcase framed-box-small">
+			<h2 id="section_loading">Loading spinners<sup>[<a href="#section_loading">#</a>]</sup></h2>
+			<p>Images with the "loading-spinner" class use the loading spinner image</p>
+			<img class="loading-spinner" width="64">
+			<p>Elements with the lazy-loading class will be covered and have the spinner in the center. Note that this uses "position: relative" at the time of writing</p>
+			<label>Add "lazy-loading" class to 280px * 280px boxes above<input autocomplete="off" type="checkbox" oninput="for (const elem of document.getElementsByClassName('test-boxes')) {elem.classList.toggle('lazy-loading', this.checked)};"></label>
+			<p>We also have spinners intended to use with text</p>
+			<ul>
+				<li class="loading-spinner-inline">loading-spinner-inline</li>
+				<li class="loading-spinner-text">loading-spinner-text</li>
+				<li class="loading-spinner-text-2">loading-spinner-text-2</li>
+				<li class="loading-spinner-text-4">loading-spinner-text-4</li>
+				<li class="loading-spinner-text-double">loading-spinner-text-double</li>
+			</ul>
+			<p>the loading-spinner-text-* classes are just abusing braille, so the text-primary midifier can apply seamlessly</p>
+			<span class="loading-spinner-text-double text-large text-primary text-fantasy">woah</span>
+			<p>And of course, there's the big loading screen</p>
+			<button id="loading_screen_activate_button">Activate loading screen</button>
+			<script>
+				window.loading_screen_activate_button.onclick = () => {
+					$setLoading(true);
+					setTimeout(() => {
+						$setLoading(true, "Wasting 5 seconds of your life...");
+					}, 2000);
+					setTimeout(() => {
+						$setLoading(false);
+					}, 7000);
+				};
+			</script>
+		</div>
+
+		<h2 id="section_hr_element">&lt;hr&gt; element<sup>[<a href="#section_hr_element">#</a>]</sup></h2>
+		<p>Now for everyone's most favourite element, &lt;hr&gt;! By default, it will scale the ornamental separator if the width of the element is smaller than 900px, else it will repeat the pattern. This is shown below.</p>
+		<hr>
+		<p>If you want to always use the scaled ornamental separator, use the "pattern-stretch" class. Though note that it has a "min-width" of 280px, and a "max-width" of 1064px.</p>
+		<hr class="pattern-stretch">
+		<p>If you want to always use the repeating pattern, use the "pattern-repeat" class.</p>
+		<hr class="pattern-repeat">
+		<h2 id="section_noughtary_button">"Noughtary" button<sup>[<a href="#section_noughtary_button">#</a>]</sup></h2>
+		<p>
+			This overly ornamented button is only intended to be used on the home page, or maybe a "main menu" or something.
+			Note that its font height is dependent on the viewport width.
+		</p>
+		<p>It can be a button or a link</p>
+		<button class="noughtary"><span class="text-fantasy text-primary">The .noughtary&#8203;:is&#8203;(&#8203;button, a&#8203;)</span></button>
+		<a href="#section_noughtary_button" class="noughtary"><span class="text-fantasy text-primary">The .noughtary&#8203;:is&#8203;(&#8203;button, a&#8203;)</span></a>
+		<form>
+			<div class="framed-box-small thing-showcase">
+				<h2 id="section_context_menus">Context menus!<sup>[<a href="#section_context_menus">#</a>]</sup></h2>
+				<p>Right click on this thing to look at the context menu!</p>
+			</div>
+			<dropdown-menu linked-elements="*:has(+ #this)">
+				<dropdown-menu-item><span>Dropdown menu!</span></dropdown-menu-item>
+				<dropdown-menu-item><span>Wow, checkboxes!</span><input type="checkbox" name="check1"></dropdown-menu-item>
+				<dropdown-menu-item><span>Cool!</span><input type="checkbox" name="check2"></dropdown-menu-item>
+				<dropdown-menu-item>
+					But was that your only choice?
+					<dropdown-menu-inner>
+						<dropdown-menu-item><span>Woah!</span><input type="radio" name="choice" value="2"></dropdown-menu-item>
+						<dropdown-menu-item><span>Amazing!</span><input type="radio" name="choice" value="3"></dropdown-menu-item>
+					</dropdown-menu-inner>
+				</dropdown-menu-item>
+				<hr>
+				<dropdown-menu-item value="5">ONE MORE THING</dropdown-menu-item>
+			</dropdown-menu>
+		</form>
+		<div class="framed-box-small thing-showcase">
+			<h2 id="section_user_inputs">User Inputs<sup>[<a href="#section_user_inputs">#</a>]</sup></h2>
+			<p>Things that the user clicky-clicky, each sub-section has toggles for you to see the different states of the input.</p>
+			<p>The "invalid" state of the input is shown when the ":invalid" psudo class is applied, when the "invalid-input" class is applied, or if the input is a child of an element with an "invalid-input" class.</p>
+			<h3 id="section_checkboxes">Toggle switches<sup>[<a href="#section_checkboxes">#</a>]</sup></h3>
+			<label>Enable inputs<input autocomplete="off" checked type="checkbox" oninput="document.querySelectorAll('#test_form1 :is(input, textarea, select)').forEach(v => v.disabled = !this.checked)"></label>
+			<label>Add input-error class on form<input autocomplete="off" type="checkbox" oninput="window.test_form1.classList.toggle('invalid-input', this.checked)"></label>
+			<form id="test_form1">
+				
+				<p>Checkboxes must be <em>inside</em> labels in order to be styled, and must be the first or last child element</p>
+
+				<label><span>Checkbox on the right</span><input type="checkbox"></label>
+				<br>
+				<label><input type="checkbox"><span>Checkbox on the left</span></label>
+				
+				<p>Note that without the &lt;span&gt; element, the checkbox would always be at the right, since CSS only knows where an element is relative to other elements, not where they are relative to any text.</p>
+				<p>"display: inline-flex;" is used to center the text relative to the checkbox</p>
+
+				<p>Same stuff applies to radio buttons</p>
+				<label><input type="radio" name="test_radio1" value="a"><span>Radio buttons?</span></label>
+				<br>
+				<label><input type="radio" name="test_radio1" value="b"><span>Wow!</span></label>
+				<br>
+				<label><input type="radio" name="test_radio1" value="c"><span>So many choices!</span></label>
+				<br>
+				<div class="example-right-side-radio">
+					<label><span>Radio buttons?</span><input type="radio" name="test_radio2" value="a"></label>
+					<br>
+					<label><span>Wow!</span><input type="radio" name="test_radio2" value="b"></label>
+					<br>
+					<label><span>So many choices!</span><input type="radio" name="test_radio2" value="c"></label>
+				</div>
+				
+				<p>The toggle switches have a fixed size of 24px, however, if the &lt;input&gt; element has the "scalable" class, the size will be determined by the font size. However, you lose the smooth transition if you do this.</p>
+
+				<label><span>Checkbox on the right</span><input class="scalable" type="checkbox"></label>
+				<br>
+				<label><input class="scalable" type="checkbox"><span>Checkbox on the left</span></label>
+
+				<p>Again, this also holds true for radio buttons</p>
+				<label><input class="scalable" type="radio" name="test_radio3" value="a"><span>Radio buttons?</span></label>
+				<br>
+				<label><input class="scalable" type="radio" name="test_radio3" value="b"><span>Wow!</span></label>
+				<br>
+				<label><input class="scalable" type="radio" name="test_radio3" value="c"><span>So many choices!</span></label>
+				<br>
+				<div class="example-right-side-radio">
+					<label><span>Radio buttons?</span><input class="scalable" type="radio" name="test_radio4" value="a"></label>
+					<br>
+					<label><span>Wow!</span><input class="scalable" type="radio" name="test_radio4" value="b"></label>
+					<br>
+					<label><span>So many choices!</span><input class="scalable" type="radio" name="test_radio4" value="c"></label>
+				</div>
+			</form>
+
+
+			<h3 id="section_slider">Sliders<sup>[<a href="#section_slider">#</a>]</sup></h3>
+			<label>Enable inputs<input autocomplete="off" checked type="checkbox" oninput="document.querySelectorAll('#test_form2 :is(input, textarea, select)').forEach(v => v.disabled = !this.checked)"></label>
+			<label>Add input-error class on form<input autocomplete="off" type="checkbox" oninput="window.test_form2.classList.toggle('invalid-input', this.checked)"></label>
+			<form id="test_form2">
+				<p>Without snap points</p>
+				<input type="range" min="0" max="100">
+
+				<p>With snap points. This example snaps to 0%, 25%, 50%, 75%, 90%, and 100%. Snap points show if the input is active.</p>
+				<input type="range" list="test_range_tickmarks" min="0" max="100">
+				<datalist id="test_range_tickmarks">
+					<option value="0"></option>
+					<option value="25"></option>
+					<option value="50"></option>
+					<option value="75"></option>
+					<option value="90"></option>
+					<option value="100"></option>
+				</datalist>
+			</form>
+
+			<h3 id="section_text_onput">Text inputs<sup>[<a href="#section_text_onput">#</a>]</sup></h3>
+			<label>Enable inputs<input autocomplete="off" checked type="checkbox" oninput="document.querySelectorAll('#test_form3 :is(input, textarea, select)').forEach(v => v.disabled = !this.checked)"></label>
+			<label>Add input-error class on form<input autocomplete="off" type="checkbox" oninput="window.test_form3.classList.toggle('invalid-input', this.checked)"></label>
+			<form id="test_form3">
+				<p>Normal text box, also used for e-mail, tel, number, etc.</p>
+				<input type="text">
+				<p>Search comes with a fancy icon!</p>
+				<input type="search">
+				<p>Also, here's a textarea</p>
+				<textarea></textarea>
+			</form>
+
+			<h3 id="section_select">&lt;select&gt; element<sup>[<a href="#section_select">#</a>]</sup></h3>
+			<label>Enable inputs<input autocomplete="off" checked type="checkbox" oninput="document.querySelectorAll('#test_form4 :is(input, textarea, select)').forEach(v => v.disabled = !this.checked)"></label>
+			<label>Add input-error class on form<input autocomplete="off" type="checkbox" oninput="window.test_form4.classList.toggle('invalid-input', this.checked)"></label>
+			<form id="test_form4">
+				<select>
+					<option>A selection menu!</option>
+					<option>Look at all these choices!</option>
+					<option>Oh my, the freedom, how whimsical!</option>
+					<option>Yaaaaaaaaaaaaaaaaay!</option>
+				</select>
+			</form>
+			<h3 id="section_buttons">It's buttons!<sup>[<a href="#section_buttons">#</a>]</sup></h3>
+			<label>Enable buttons<input autocomplete="off" checked type="checkbox" oninput="document.querySelectorAll('#test_buttons1 :is(button, input)').forEach(v => v.disabled = !this.checked)"></label>
+			<p>Very unassuming clicky things. Applies to &lt;button&gt; elements, or &lt;label&gt; and &lt;a&gt; elements with a "button" class.</p>
+			<div id="test_buttons1">
+				<p>Comes in 4 sizes, like short...</p>
+				<button class="short primary">Primary</button>
+				<button class="short">Regular</button>
+				<button class="short danger">Danger</button>
+				<button class="short warning">Warning</button>
+				<button class="short success">Success</button>
+				<p>small...</p>
+				<button class="small primary">Primary</button>
+				<button class="small">Regular</button>
+				<button class="small danger">Danger</button>
+				<button class="small warning">Warning</button>
+				<button class="small success">Success</button>
+				<p>medium, which is the default...</p>
+				<button class="primary">Primary</button>
+				<button>Regular</button>
+				<button class="danger">Danger</button>
+				<button class="warning">Warning</button>
+				<button class="success">Success</button>
+				<p>and large!</p>
+				<button class="large primary">Primary</button>
+				<button class="large">Regular</button>
+				<button class="large danger">Danger</button>
+				<button class="large warning">Warning</button>
+				<button class="large success">Success</button>
+
+				<p>Wow! Toggle buttons! These are created when giving a &lt;label&gt; element a "button" class. Note that at the time of writing, they are only styled properly in the case where the &lt;input&gt; element is on the right side.</p>
+				<p>These also come in 4 sizes, like short...</p>
+				<label class="short button primary">Primary<input type="checkbox"></label>
+				<label class="short button">Regular<input type="checkbox"></label>
+				<label class="short button danger">Danger<input type="checkbox"></label>
+				<label class="short button warning">Warning<input type="checkbox"></label>
+				<label class="short button success">Success<input type="checkbox"></label>
+				<p>small...</p>
+				<label class="small button primary">Primary<input type="checkbox"></label>
+				<label class="small button">Regular<input type="checkbox"></label>
+				<label class="small button danger">Danger<input type="checkbox"></label>
+				<label class="small button warning">Warning<input type="checkbox"></label>
+				<label class="small button success">Success<input type="checkbox"></label>
+				<p>medium...</p>
+				<label class="button primary">Primary<input type="checkbox"></label>
+				<label class="button">Regular<input type="checkbox"></label>
+				<label class="button danger">Danger<input type="checkbox"></label>
+				<label class="button warning">Warning<input type="checkbox"></label>
+				<label class="button success">Success<input type="checkbox"></label>
+				<p>and large!</p>
+				<label class="large button primary">Primary<input type="checkbox"></label>
+				<label class="large button">Regular<input type="checkbox"></label>
+				<label class="large button danger">Danger<input type="checkbox"></label>
+				<label class="large button warning">Warning<input type="checkbox"></label>
+				<label class="large button success">Success<input type="checkbox"></label>
+				<p>Where there can be toggle buttons, there can also be radio buttons, Just gonna show the default size here...</p>
+				<label class="button primary">Primary<input name="test_big_radio_button" type="radio"></label>
+				<label class="button">Regular<input name="test_big_radio_button" type="radio"></label>
+				<label class="button danger">Danger<input name="test_big_radio_button" type="radio"></label>
+				<label class="button warning">Warning<input name="test_big_radio_button" type="radio"></label>
+				<label class="button success">Success<input name="test_big_radio_button" type="radio"></label>
+			</div>
+		</div>
+		<div class="framed-box-small thing-showcase">
+			<h2 id="section_dialog">Dialog boxes<sup>[<a href="#section_dialog">#</a>]</sup></h2>
+			<p>Style for dialogs pretty basic, it's similar to the "rounded-box" class. If there's an &lt;h1&gt; as the first element, it will act as the dialog box's title. The max-width is also set to 550px or the width of the viewport, whichevers smaller. Paragraphs also have half the top/bottom margin.</p>
+			<p>Note how the &lt;form&gt; element in the dialog has a "button-row" and "euqal-width" class. By default anything with the "button-row" class is a flexbox with "justify-content: space-around". But if it also has an "equal-width" class, all the children will (oppertunistically) be of equal width.</p>
+			<button onclick="window.dialog_example_basic.showModal()">Basic dialog</button>
+			<dialog id="dialog_example_basic">
+				<h1>Title text</h1>
+				<p>This is as basic as it gets!</p>
+				<form class="button-row equal-width" method="dialog">
+					<button class="small" autofocus>OK</button>
+				</form>
+			</dialog>
+			<p>If the element immediately following the title text is a "dialog-cicon", it will float to the left</p>
+			<button onclick="window.dialog_example_icon.showModal()">Message box with icon</button>
+			<dialog id="dialog_example_icon">
+				<h1>Title text</h1>
+				<i class="dialog-cicon cicon-info"></i>
+				<p>This is a message with an icon!</p>
+				<form class="button-row equal-width" method="dialog">
+					<button class="small" autofocus>OK</button>
+				</form>
+			</dialog>
+
+			<button class="danger" onclick="window.dialog_example_icon_danger.showModal()">Ditto</button>
+			<dialog class="danger" id="dialog_example_icon_danger">
+				<h1>Oh no, Error!</h1>
+				<i class="dialog-cicon cicon-tired"></i>
+				<p>Something bad probably happened!</p>
+				<form class="button-row equal-width" method="dialog">
+					<button class="small" autofocus>OK</button>
+				</form>
+			</dialog>
+
+			<button class="warning" onclick="window.dialog_example_icon_warning.showModal()">Ditto</button>
+			<dialog class="warning" id="dialog_example_icon_warning">
+				<h1>Warning!</h1>
+				<i class="dialog-cicon cicon-warning"></i>
+				<p>You probably have to be careful about something!</p>
+				<form class="button-row equal-width" method="dialog">
+					<button class="small" autofocus>OK</button>
+				</form>
+			</dialog>
+
+			<button class="success" onclick="window.dialog_example_icon_success.showModal()">Ditto</button>
+			<dialog class="success" id="dialog_example_icon_success">
+				<h1>Yaay!</h1>
+				<i class="dialog-cicon cicon-check-circle-o"></i>
+				<p>Something good probably happened!</p>
+				<form class="button-row equal-width" method="dialog">
+					<button class="small" autofocus>OK</button>
+				</form>
+			</dialog>
+
+			<p>Here's what an error message with a stack trace would probably look like. Textareas which are direct children of dialog elements aren't resizable.</p>
+			<button class="danger" onclick="window.dialog_example_stack_trace.showModal()">Error message</button>
+			<dialog class="danger" id="dialog_example_stack_trace">
+				<h1>Oh no, Error!</h1>
+				<i class="dialog-cicon cicon-tired"></i>
+				<p>Something bad probably happened!</p>
+				<textarea readonly>
+Stack trace go Hereeeeeeeeeeeeeeeeeeeeeeeee
+wee wo wee wo wee wo
+QWNjb3JkaW5nIHRvIGFsbCBrbm93biBsYXdzCm9mIGF2aWF0aW9uLAp0aGVyZSBpcyBubyB3YXkg
+YSBiZWUKc2hvdWxkIGJlIGFibGUgdG8gZmx5LgpJdHMgd2luZ3MgYXJlIHRvbyBzbWFsbCB0byBn
+ZXQKaXRzIGZhdCBsaXR0bGUgYm9keSBvZmYgdGhlIGdyb3VuZC4KVGhlIGJlZSwgb2YgY291cnNl
+LCBmbGllcyBhbnl3YXkKYmVjYXVzZSBiZWVzIGRvbid0IGNhcmUKd2hhdCBodW1hbnMgdGhpbmsg
+aXMgaW1wb3NzaWJsZS4KWWVsbG93LCBibGFjay4gWWVsbG93LCBibGFjay4KWWVsbG93LCBibGFj
+ay4gWWVsbG93LCBibGFjay4KT29oLCBibGFjayBhbmQgeWVsbG93IQpMZXQncyBzaGFrZSBpdCB1
+cCBhIGxpdHRsZS4KQmFycnkhIEJyZWFrZmFzdCBpcyByZWFkeSEKT29taW5nIQpIYW5nIG9uIGEg
+c2Vjb25kLgpIZWxsbz8KLSBCYXJyeT8KLSBBZGFtPwotIE9hbiB5b3UgYmVsaWV2ZSB0aGlzIGlz
+IGhhcHBlbmluZz8KLSBJIGNhbid0LiBJJ2xsIHBpY2sgeW91IHVwLgpMb29raW5nIHNoYXJwLgpV
+c2UgdGhlIHN0YWlycy4gWW91ciBmYXRoZXIKcGFpZCBnb29kIG1vbmV5IGZvciB0aG9zZS4KU29y
+cnkuIEknbSBleGNpdGVkLgpIZXJlJ3MgdGhlIGdyYWR1YXRlLgpXZSdyZSB2ZXJ5IHByb3VkIG9m
+IHlvdSwgc29uLgpBIHBlcmZlY3QgcmVwb3J0IGNhcmQsIGFsbCBCJ3MuClZlcnkgcHJvdWQuCk1h
+ISBJIGdvdCBhIHRoaW5nIGdvaW5nIGhlcmUuCi0gWW91IGdvdCBsaW50IG9uIHlvdXIgZnV6ei4K
+LSBPdyEgVGhhdCdzIG1lIQotIFdhdmUgdG8gdXMhIFdlJ2xsIGJlIGluIHJvdyAxMTgsMDAwLgot
+IEJ5ZSEKQmFycnksIEkgdG9sZCB5b3UsCnN0b3AgZmx5aW5nIGluIHRoZSBob3VzZSEKLSBIZXks
+IEFkYW0uCi0gSGV5LCBCYXJyeS4KLSBJcyB0aGF0IGZ1enogZ2VsPwotIEEgbGl0dGxlLiBTcGVj
+aWFsIGRheSwgZ3JhZHVhdGlvbi4KTmV2ZXIgdGhvdWdodCBJJ2QgbWFrZSBpdC4KVGhyZWUgZGF5
+cyBncmFkZSBzY2hvb2wsCnRocmVlIGRheXMgaGlnaCBzY2hvb2wuClRob3NlIHdlcmUgYXdrd2Fy
+ZC4KVGhyZWUgZGF5cyBjb2xsZWdlLiBJJ20gZ2xhZCBJIHRvb2sKYSBkYXkgYW5kIGhpdGNoaGlr
+ZWQgYXJvdW5kIHRoZSBoaXZlLgpZb3UgZGlkIGNvbWUgYmFjayBkaWZmZXJlbnQuCi0gSGksIEJh
+cnJ5LgotIEFydGllLCBncm93aW5nIGEgbXVzdGFjaGU/IExvb2tzIGdvb2QuCi0gSGVhciBhYm91
+dCBGcmFua2llPwotIFllYWguCi0gWW91IGdvaW5nIHRvIHRoZSBmdW5lcmFsPwotIE5vLCBJJ20g
+bm90IGdvaW5nLgpFdmVyeWJvZHkga25vd3MsCnN0aW5nIHNvbWVvbmUsIHlvdSBkaWUuCkRvbid0
+IHdhc3RlIGl0IG9uIGEgc3F1aXJyZWwuClN1Y2ggYSBob3RoZWFkLgpJIGd1ZXNzIGhlIGNvdWxk
+IGhhdmUKanVzdCBnb3R0ZW4gb3V0IG9mIHRoZSB3YXkuCkkgbG92ZSB0aGlzIGluY29ycG9yYXRp
+bmcKYW4gYW11c2VtZW50IHBhcmsgaW50byBvdXIgZGF5LgpUaGF0J3Mgd2h5IHdlIGRvbid0IG5l
+ZWQgdmFjYXRpb25zLgpCb3ksIHF1aXRlIGEgYml0IG9mIHBvbXAuLi4KdW5kZXIgdGhlIGNpcmN1
+bXN0YW5jZXMuCi0gV2VsbCwgQWRhbSwgdG9kYXkgd2UgYXJlIG1lbi4KLSBXZSBhcmUhCi0gQmVl
+LW1lbi4KLSBBbWVuIQpIYWxsZWx1amFoIQpTdHVkZW50cywgZmFjdWx0eSwgZGlzdGluZ3Vpc2hl
+ZCBiZWVzLApwbGVhc2Ugd2VsY29tZSBEZWFuIEJ1enp3ZWxsLiAK
+				</textarea>
+				<form class="button-row equal-width" method="dialog">
+					<button class="small" autofocus>OK</button>
+				</form>
+			</dialog>
+			<p>Last, but not least, the JS package exports helper functions to create these message boxes programatically, with the "alert", "confirm", and "msgBox" functions. (Exposed to the window object as "$alert", "$confirm", and "$msgBox" respectively on this page) Try them out!</p>
+		</div>
+
+
+		<div class="framed-box-small thing-showcase">
+			<h2 class="text-fantasy" id="section_fancy_user_inputs">Fancy User Inputs<sup>[<a href="#section_fancy_user_inputs">#</a>]</sup></h2>
+			<label>Enable buttons<input autocomplete="off" checked type="checkbox" oninput="document.querySelectorAll(':is(#test_buttons2, #test_buttons3) :is(button, input)').forEach(v => v.disabled = !this.checked)"></label>
+			<p>Things that the user clicky-clicky, but <span class="text-fantasy text-primary">fancier!!</span></p>
+			<h3 class="text-fantasy" id="section_fancy_buttons">Fancy buttons<sup>[<a href="#section_fancy_buttons">#</a>]</sup></h3>
+			<p>Circular buttons! These are always at a 1:1 ratio. Note that no effort was put into danger/warning/success variants beyond changing the colour of the gem.</p>
+			<div id="test_buttons2" style="display: flex; align-items: center; justify-content: space-around;">
+				<button class="fantasy-circular">
+					<span class="cicon cicon-fantasy-arrow-up cicon-gradient primary"></span>
+					<span class="cicon cicon-fantasy-arrow-down cicon-gradient primary"></span>
+				</button>
+				<button class="fantasy-circular">
+					<span class="cicon cicon-gradient primary"></span>
+				</button>
+				<button class="fantasy-circular">
+					<span class="cicon cicon-fantasy-crown"></span>
+				</button>
+				<button class="fantasy-circular" style="font-size: var(--icon-size-double);">
+					<span class="cicon cicon-fantasy-crown cicon-gradient primary"></span>
+				</button>
+				<button class="fantasy-circular">
+					<span class="cicon cicon-gradient primary"></span>
+				</button>
+			</div>
+			<p>The fancy buttons, which can be created using the "fantasy" and "fantasy-ornamental", do not come in differing heights, but will themselves shrink by approx 76% if the screen width is smaller than 600px. You can prevent this by adding the "no-scale" class on the buttons.</p>
+			<p>These are the fantasy buttons</p>
+			<div id="test_buttons3">
+				<button class="fantasy primary">Primary</button>
+				<button class="fantasy">Regular</button>
+				<button class="fantasy danger">Danger</button>
+				<button class="fantasy warning">Warning</button>
+				<button class="fantasy success">Success</button>
+				<p>Note that if you're going to style a checkbox as a fantasy button, the label must contain an element.</p>
+				<label class="button fantasy primary"><span>Primary</span><input type="checkbox"></label>
+				<label class="button fantasy"><span>Regular</span><input type="checkbox"></label>
+				<label class="button fantasy danger"><span>Danger</span><input type="checkbox"></label>
+				<label class="button fantasy warning"><span>Warning</span><input type="checkbox"></label>
+				<label class="button fantasy success"><span>Success</span><input type="checkbox"></label>
+
+				<p>These are the fantasy-ornamental buttons</p>
+				<button class="fantasy-ornamental">Regular</button>
+				<button class="fantasy-ornamental danger">Danger</button>
+				<button class="fantasy-ornamental warning">Warning</button>
+				<button class="fantasy-ornamental success">Success</button>
+				<p>...which can also be check boxes (assuming you have that span)</p>
+				<label class="button fantasy-ornamental"><span>Regular</span><input type="checkbox"></label>
+				<label class="button fantasy-ornamental danger"><span>Danger</span><input type="checkbox"></label>
+				<label class="button fantasy-ornamental warning"><span>Warning</span><input type="checkbox"></label>
+				<label class="button fantasy-ornamental success"><span>Success</span><input type="checkbox"></label>
+			</div>
+			<h3 class="text-fantasy" id="section_input_group">Fancy Input Group<sup>[<a href="#section_input_group">#</a>]</sup></h3>
+			<label>Enable inputs<input autocomplete="off" checked type="checkbox" oninput="document.querySelectorAll('#input_group_showcase :is(input, textarea, select, button)').forEach(v => v.disabled = !this.checked)"></label>
+			<label>Add input-error class on groups<input autocomplete="off" type="checkbox" oninput="window.input_group_showcase.classList.toggle('invalid-input', this.checked)"></label>
+			<p>Sometimes we group inputs together, here's what that looks like. By default it's a flexbox that aligns things to the center and justifies to space-between. It also lights up if any inputs inside have focus, and will use a disabled style if all of its inner inputs are disabled.</p>
+			<div id="input_group_showcase">
+				<div class="fantasy-input-group">
+					<button class="fantasy">I'm in a group!</button>
+					<button class="fantasy">I'm also in a group!</button>
+					<button class="fantasy">Buttons be grouped together</button>
+				</div>
+				<p>The flex-direction switches to "column" if the first element is an &lt;input&gt; and has less than 2 siblings, with an alignment of "stretch" and a justification of "space-between"</p>
+				<label class="fantasy-input-group">
+					<input type="text">
+				</label>
+				<label class="fantasy-input-group">
+					<input type="text">
+					<span>omg a label</span>
+				</label>
+				<div class="fantasy-input-group">
+					<button class="fantasy no-scale">Click to click</button>
+					<input placeholder="Search..." type="text">
+					<span class="cicon cicon-fantasy-search cicon-size-large primary cicon-gradient"></span>
+				</div>
+				<p>There also exists an "input-group-inner-stack" class, here's this example that's laid out in a very arbitrary way. Note that when using the "number" input type, the sans-serif font is used.</p>
+				<div class="fantasy-input-group">
+					<button class="fantasy no-scale">Clicky</button>
+					<div class="input-group-inner-stack">
+						<input type="number">
+						<input list="test_range_tickmarks" type="range">
+					</div>
+				</div>
+				<p>And you can use the "small" class</p>
+				<div class="fantasy-input-group small">
+					<button class="fantasy">Click to click</button>
+					<input placeholder="Search..." type="text">
+					<span class="cicon cicon-fantasy-search cicon-size-large primary cicon-gradient"></span>
+				</div>
+			</div>
+			
+			<h3 class="text-fantasy" id="section_menu_item_block">Menu item block<sup>[<a href="#section_menu_item_block">#</a>]</sup></h3>
+			<p>Here's a thing with a "fantasy-menu-item-block" class, it contains a thing with a "badge" class.</p>
+			<div class="fantasy-menu-item-block">
+				<p>aaaaaaaaaaaaaaaaaaaa <span class="badge">Woah</span> </p>
+			</div>
+			<h3 class="text-fantasy" id="section_app_tabs">App tabs<sup>[<a href="#section_app_tabs">#</a>]</sup></h3>
+			<p>These are the "fantasy-tabs" note that the use of the "is" attribute, which means that this is an extensible custom element.</p>
+			<p>Each inner &lt;li&gt; must have a "data-value" attribute. The &lt;menu is="fantasy-tabs"&gt; can also have a reflecting "selected-value" attribute</p>
+			<menu selected-value="step1" id="test_fantasy_tabs" is="fantasy-tabs">
+				<li data-value="step1">
+					<span class="cicon cicon-size-large cicon-beer cicon-gradient primary"></span>
+					<span class="text-large">STEP1</span>
+				</li>
+				<li data-value="step2">
+					<span class="cicon cicon-size-large cicon-magic cicon-gradient primary"></span>
+					<span class="text-large">STEP2</span>
+				</li>
+				<li data-value="step3">
+					<span class="cicon cicon-size-large cicon-smile cicon-gradient primary"></span>
+					<span class="text-large">STEP3</span>
+				</li>
+			</menu>
+			<p>When an option is selected, a "fantasyTabSelected" event will fire with the value. <span id="test_fantasy_tabs_value"></span></p>
+			<script>
+				window.test_fantasy_tabs.addEventListener("fantasyTabSelected", (ev) => {
+					window.test_fantasy_tabs_value.innerText = "You selected " + ev.detail.value;
+				});
+			</script>
+		</div>
+		<div class="test-crowndings framed-box-small">
+			<h2 id="section_crowndings">We made our own windings because reasons<sup>[<a href="#section_crowndings">#</a>]</sup></h2>
+			<div><i>cicon (none)</i><i class="cicon cicon-size-medium"></i></div>
+			<div><i>cicon-activity</i><i class="cicon cicon-size-medium cicon-activity"></i></div>
+			<div><i>cicon-add-cart</i><i class="cicon cicon-size-medium cicon-add-cart"></i></div>
+			<div><i>cicon-add-list</i><i class="cicon cicon-size-medium cicon-add-list"></i></div>
+			<div><i>cicon-align-bottom</i><i class="cicon cicon-size-medium cicon-align-bottom"></i></div>
+			<div><i>cicon-align-center</i><i class="cicon cicon-size-medium cicon-align-center"></i></div>
+			<div><i>cicon-align-left</i><i class="cicon cicon-size-medium cicon-align-left"></i></div>
+			<div><i>cicon-align-right</i><i class="cicon cicon-size-medium cicon-align-right"></i></div>
+			<div><i>cicon-align-top</i><i class="cicon cicon-size-medium cicon-align-top"></i></div>
+			<div><i>cicon-align-vertically</i><i class="cicon cicon-size-medium cicon-align-vertically"></i></div>
+			<div><i>cicon-angry</i><i class="cicon cicon-size-medium cicon-angry"></i></div>
+			<div><i>cicon-app-menu</i><i class="cicon cicon-size-medium cicon-app-menu"></i></div>
+			<div><i>cicon-apron</i><i class="cicon cicon-size-medium cicon-apron"></i></div>
+			<div><i>cicon-arrow-down</i><i class="cicon cicon-size-medium cicon-arrow-down"></i></div>
+			<div><i>cicon-arrow-left</i><i class="cicon cicon-size-medium cicon-arrow-left"></i></div>
+			<div><i>cicon-arrow-right</i><i class="cicon cicon-size-medium cicon-arrow-right"></i></div>
+			<div><i>cicon-arrow-up</i><i class="cicon cicon-size-medium cicon-arrow-up"></i></div>
+			<div><i>cicon-artboard</i><i class="cicon cicon-size-medium cicon-artboard"></i></div>
+			<div><i>cicon-audio-player</i><i class="cicon cicon-size-medium cicon-audio-player"></i></div>
+			<div><i>cicon-backward</i><i class="cicon cicon-size-medium cicon-backward"></i></div>
+			<div><i>cicon-bar-chart</i><i class="cicon cicon-size-medium cicon-bar-chart"></i></div>
+			<div><i>cicon-bar</i><i class="cicon cicon-size-medium cicon-bar"></i></div>
+			<div><i>cicon-beer</i><i class="cicon cicon-size-medium cicon-beer"></i></div>
+			<div><i>cicon-beginner</i><i class="cicon cicon-size-medium cicon-beginner"></i></div>
+			<div><i>cicon-bell</i><i class="cicon cicon-size-medium cicon-bell"></i></div>
+			<div><i>cicon-birthday-cake</i><i class="cicon cicon-size-medium cicon-birthday-cake"></i></div>
+			<div><i>cicon-bold</i><i class="cicon cicon-size-medium cicon-bold"></i></div>
+			<div><i>cicon-bolt</i><i class="cicon cicon-size-medium cicon-bolt"></i></div>
+			<div><i>cicon-book-alt</i><i class="cicon cicon-size-medium cicon-book-alt"></i></div>
+			<div><i>cicon-bookmark</i><i class="cicon cicon-size-medium cicon-bookmark"></i></div>
+			<div><i>cicon-book</i><i class="cicon cicon-size-medium cicon-book"></i></div>
+			<div><i>cicon-bread</i><i class="cicon cicon-size-medium cicon-bread"></i></div>
+			<div><i>cicon-browser</i><i class="cicon cicon-size-medium cicon-browser"></i></div>
+			<div><i>cicon-brush</i><i class="cicon cicon-size-medium cicon-brush"></i></div>
+			<div><i>cicon-bug</i><i class="cicon cicon-size-medium cicon-bug"></i></div>
+			<div><i>cicon-building</i><i class="cicon cicon-size-medium cicon-building"></i></div>
+			<div><i>cicon-cage</i><i class="cicon cicon-size-medium cicon-cage"></i></div>
+			<div><i>cicon-calendar</i><i class="cicon cicon-size-medium cicon-calendar"></i></div>
+			<div><i>cicon-camera</i><i class="cicon cicon-size-medium cicon-camera"></i></div>
+			<div><i>cicon-cart</i><i class="cicon cicon-size-medium cicon-cart"></i></div>
+			<div><i>cicon-check-circle-o</i><i class="cicon cicon-size-medium cicon-check-circle-o"></i></div>
+			<div><i>cicon-check-circle</i><i class="cicon cicon-size-medium cicon-check-circle"></i></div>
+			<div><i>cicon-check</i><i class="cicon cicon-size-medium cicon-check"></i></div>
+			<div><i>cicon-check-verified</i><i class="cicon cicon-size-medium cicon-check-verified"></i></div>
+			<div><i>cicon-clock</i><i class="cicon cicon-size-medium cicon-clock"></i></div>
+			<div><i>cicon-close</i><i class="cicon cicon-size-medium cicon-close"></i></div>
+			<div><i>cicon-cloud-drizzle</i><i class="cicon cicon-size-medium cicon-cloud-drizzle"></i></div>
+			<div><i>cicon-cloud-lighting</i><i class="cicon cicon-size-medium cicon-cloud-lighting"></i></div>
+			<div><i>cicon-cloud-raining</i><i class="cicon cicon-size-medium cicon-cloud-raining"></i></div>
+			<div><i>cicon-cloud-snow</i><i class="cicon cicon-size-medium cicon-cloud-snow"></i></div>
+			<div><i>cicon-cloud-sun</i><i class="cicon cicon-size-medium cicon-cloud-sun"></i></div>
+			<div><i>cicon-cloud</i><i class="cicon cicon-size-medium cicon-cloud"></i></div>
+			<div><i>cicon-cloud-wind</i><i class="cicon cicon-size-medium cicon-cloud-wind"></i></div>
+			<div><i>cicon-cloudy</i><i class="cicon cicon-size-medium cicon-cloudy"></i></div>
+			<div><i>cicon-cocktail</i><i class="cicon cicon-size-medium cicon-cocktail"></i></div>
+			<div><i>cicon-code</i><i class="cicon cicon-size-medium cicon-code"></i></div>
+			<div><i>cicon-coffee</i><i class="cicon cicon-size-medium cicon-coffee"></i></div>
+			<div><i>cicon-columns</i><i class="cicon cicon-size-medium cicon-columns"></i></div>
+			<div><i>cicon-commenting</i><i class="cicon cicon-size-medium cicon-commenting"></i></div>
+			<div><i>cicon-comment-o</i><i class="cicon cicon-size-medium cicon-comment-o"></i></div>
+			<div><i>cicon-comments</i><i class="cicon cicon-size-medium cicon-comments"></i></div>
+			<div><i>cicon-comment</i><i class="cicon cicon-size-medium cicon-comment"></i></div>
+			<div><i>cicon-compress</i><i class="cicon cicon-size-medium cicon-compress"></i></div>
+			<div><i>cicon-credit-card</i><i class="cicon cicon-size-medium cicon-credit-card"></i></div>
+			<div><i>cicon-crop</i><i class="cicon cicon-size-medium cicon-crop"></i></div>
+			<div><i>cicon-cry</i><i class="cicon cicon-size-medium cicon-cry"></i></div>
+			<div><i>cicon-cutlery</i><i class="cicon cicon-size-medium cicon-cutlery"></i></div>
+			<div><i>cicon-delete-link</i><i class="cicon cicon-size-medium cicon-delete-link"></i></div>
+			<div><i>cicon-desktop</i><i class="cicon cicon-size-medium cicon-desktop"></i></div>
+			<div><i>cicon-diary</i><i class="cicon cicon-size-medium cicon-diary"></i></div>
+			<div><i>cicon-difference</i><i class="cicon cicon-size-medium cicon-difference"></i></div>
+			<div><i>cicon-disabled</i><i class="cicon cicon-size-medium cicon-disabled"></i></div>
+			<div><i>cicon-disappointed</i><i class="cicon cicon-size-medium cicon-disappointed"></i></div>
+			<div><i>cicon-distribute-horizontally</i><i class="cicon cicon-size-medium cicon-distribute-horizontally"></i></div>
+			<div><i>cicon-distribute-vertically</i><i class="cicon cicon-size-medium cicon-distribute-vertically"></i></div>
+			<div><i>cicon-document</i><i class="cicon cicon-size-medium cicon-document"></i></div>
+			<div><i>cicon-donut</i><i class="cicon cicon-size-medium cicon-donut"></i></div>
+			<div><i>cicon-download</i><i class="cicon cicon-size-medium cicon-download"></i></div>
+			<div><i>cicon-drizzle</i><i class="cicon cicon-size-medium cicon-drizzle"></i></div>
+			<div><i>cicon-drop-down</i><i class="cicon cicon-size-medium cicon-drop-down"></i></div>
+			<div><i>cicon-drop-left</i><i class="cicon cicon-size-medium cicon-drop-left"></i></div>
+			<div><i>cicon-drop-right</i><i class="cicon cicon-size-medium cicon-drop-right"></i></div>
+			<div><i>cicon-drop-up</i><i class="cicon cicon-size-medium cicon-drop-up"></i></div>
+			<div><i>cicon-edit</i><i class="cicon cicon-size-medium cicon-edit"></i></div>
+			<div><i>cicon-eject</i><i class="cicon cicon-size-medium cicon-eject"></i></div>
+			<div><i>cicon-elipsis-h</i><i class="cicon cicon-size-medium cicon-elipsis-h"></i></div>
+			<div><i>cicon-elipsis-v</i><i class="cicon cicon-size-medium cicon-elipsis-v"></i></div>
+			<div><i>cicon-equalizer</i><i class="cicon cicon-size-medium cicon-equalizer"></i></div>
+			<div><i>cicon-eraser</i><i class="cicon cicon-size-medium cicon-eraser"></i></div>
+			<div><i>cicon-expand</i><i class="cicon cicon-size-medium cicon-expand"></i></div>
+			<div><i>cicon-export</i><i class="cicon cicon-size-medium cicon-export"></i></div>
+			<div><i>cicon-eye</i><i class="cicon cicon-size-medium cicon-eye"></i></div>
+			<div><i>cicon-fantasy-arrows-clockwise</i><i class="cicon cicon-size-medium cicon-fantasy-arrows-clockwise"></i></div>
+			<div><i>cicon-fantasy-chevron</i><i class="cicon cicon-size-medium cicon-fantasy-chevron"></i></div>
+			<div><i>cicon-fantasy-controls</i><i class="cicon cicon-size-medium cicon-fantasy-controls"></i></div>
+			<div><i>cicon-fantasy-crown-outline</i><i class="cicon cicon-size-medium cicon-fantasy-crown-outline"></i></div>
+			<div><i>cicon-fantasy-crown</i><i class="cicon cicon-size-medium cicon-fantasy-crown"></i></div>
+			<div><i>cicon-fantasy-farm</i><i class="cicon cicon-size-medium cicon-fantasy-farm"></i></div>
+			<div><i>cicon-fantasy-filter-enable</i><i class="cicon cicon-size-medium cicon-fantasy-filter-enable"></i></div>
+			<div><i>cicon-fantasy-search</i><i class="cicon cicon-size-medium cicon-fantasy-search"></i></div>
+			<div><i>cicon-fantasy-toggle-disabled</i><i class="cicon cicon-size-medium cicon-fantasy-toggle-disabled"></i></div>
+			<div><i>cicon-fantasy-toggle-enabled</i><i class="cicon cicon-size-medium cicon-fantasy-toggle-enabled"></i></div>
+			<div><i>cicon-fast-backward</i><i class="cicon cicon-size-medium cicon-fast-backward"></i></div>
+			<div><i>cicon-fast-forward</i><i class="cicon cicon-size-medium cicon-fast-forward"></i></div>
+			<div><i>cicon-feather</i><i class="cicon cicon-size-medium cicon-feather"></i></div>
+			<div><i>cicon-feed</i><i class="cicon cicon-size-medium cicon-feed"></i></div>
+			<div><i>cicon-file-audio</i><i class="cicon cicon-size-medium cicon-file-audio"></i></div>
+			<div><i>cicon-file-excel</i><i class="cicon cicon-size-medium cicon-file-excel"></i></div>
+			<div><i>cicon-file-image</i><i class="cicon cicon-size-medium cicon-file-image"></i></div>
+			<div><i>cicon-file-movie</i><i class="cicon cicon-size-medium cicon-file-movie"></i></div>
+			<div><i>cicon-file-powerpoint</i><i class="cicon cicon-size-medium cicon-file-powerpoint"></i></div>
+			<div><i>cicon-file</i><i class="cicon cicon-size-medium cicon-file"></i></div>
+			<div><i>cicon-file-word</i><i class="cicon cicon-size-medium cicon-file-word"></i></div>
+			<div><i>cicon-file-zip</i><i class="cicon cicon-size-medium cicon-file-zip"></i></div>
+			<div><i>cicon-filter</i><i class="cicon cicon-size-medium cicon-filter"></i></div>
+			<div><i>cicon-flag</i><i class="cicon cicon-size-medium cicon-flag"></i></div>
+			<div><i>cicon-folder-open</i><i class="cicon cicon-size-medium cicon-folder-open"></i></div>
+			<div><i>cicon-folder</i><i class="cicon cicon-size-medium cicon-folder"></i></div>
+			<div><i>cicon-fork</i><i class="cicon cicon-size-medium cicon-fork"></i></div>
+			<div><i>cicon-forward</i><i class="cicon cicon-size-medium cicon-forward"></i></div>
+			<div><i>cicon-frowing</i><i class="cicon cicon-size-medium cicon-frowing"></i></div>
+			<div><i>cicon-frying-pan</i><i class="cicon cicon-size-medium cicon-frying-pan"></i></div>
+			<div><i>cicon-full-moon</i><i class="cicon cicon-size-medium cicon-full-moon"></i></div>
+			<div><i>cicon-gamepad</i><i class="cicon cicon-size-medium cicon-gamepad"></i></div>
+			<div><i>cicon-gear</i><i class="cicon cicon-size-medium cicon-gear"></i></div>
+			<div><i>cicon-gift</i><i class="cicon cicon-size-medium cicon-gift"></i></div>
+			<div><i>cicon-globe</i><i class="cicon cicon-size-medium cicon-globe"></i></div>
+			<div><i>cicon-headphone</i><i class="cicon cicon-size-medium cicon-headphone"></i></div>
+			<div><i>cicon-home</i><i class="cicon cicon-size-medium cicon-home"></i></div>
+			<div><i>cicon-import</i><i class="cicon cicon-size-medium cicon-import"></i></div>
+			<div><i>cicon-info</i><i class="cicon cicon-size-medium cicon-info"></i></div>
+			<div><i>cicon-insert-link</i><i class="cicon cicon-size-medium cicon-insert-link"></i></div>
+			<div><i>cicon-intersect</i><i class="cicon cicon-size-medium cicon-intersect"></i></div>
+			<div><i>cicon-italic</i><i class="cicon cicon-size-medium cicon-italic"></i></div>
+			<div><i>cicon-keyboard</i><i class="cicon cicon-size-medium cicon-keyboard"></i></div>
+			<div><i>cicon-key</i><i class="cicon cicon-size-medium cicon-key"></i></div>
+			<div><i>cicon-kitchen-cooker</i><i class="cicon cicon-size-medium cicon-kitchen-cooker"></i></div>
+			<div><i>cicon-laptop</i><i class="cicon cicon-size-medium cicon-laptop"></i></div>
+			<div><i>cicon-layer</i><i class="cicon cicon-size-medium cicon-layer"></i></div>
+			<div><i>cicon-layout</i><i class="cicon cicon-size-medium cicon-layout"></i></div>
+			<div><i>cicon-line-chart</i><i class="cicon cicon-size-medium cicon-line-chart"></i></div>
+			<div><i>cicon-link-external</i><i class="cicon cicon-size-medium cicon-link-external"></i></div>
+			<div><i>cicon-link</i><i class="cicon cicon-size-medium cicon-link"></i></div>
+			<div><i>cicon-list-bullet</i><i class="cicon cicon-size-medium cicon-list-bullet"></i></div>
+			<div><i>cicon-list-order</i><i class="cicon cicon-size-medium cicon-list-order"></i></div>
+			<div><i>cicon-list-task</i><i class="cicon cicon-size-medium cicon-list-task"></i></div>
+			<div><i>cicon-location</i><i class="cicon cicon-size-medium cicon-location"></i></div>
+			<div><i>cicon-lock</i><i class="cicon cicon-size-medium cicon-lock"></i></div>
+			<div><i>cicon-login</i><i class="cicon cicon-size-medium cicon-login"></i></div>
+			<div><i>cicon-logout</i><i class="cicon cicon-size-medium cicon-logout"></i></div>
+			<div><i>cicon-loop</i><i class="cicon cicon-size-medium cicon-loop"></i></div>
+			<div><i>cicon-magic</i><i class="cicon cicon-size-medium cicon-magic"></i></div>
+			<div><i>cicon-mail</i><i class="cicon cicon-size-medium cicon-mail"></i></div>
+			<div><i>cicon-map</i><i class="cicon cicon-size-medium cicon-map"></i></div>
+			<div><i>cicon-mask</i><i class="cicon cicon-size-medium cicon-mask"></i></div>
+			<div><i>cicon-medal</i><i class="cicon cicon-size-medium cicon-medal"></i></div>
+			<div><i>cicon-megaphone</i><i class="cicon cicon-size-medium cicon-megaphone"></i></div>
+			<div><i>cicon-mention</i><i class="cicon cicon-size-medium cicon-mention"></i></div>
+			<div><i>cicon-minus</i><i class="cicon cicon-size-medium cicon-minus"></i></div>
+			<div><i>cicon-mitarashi-dango</i><i class="cicon cicon-size-medium cicon-mitarashi-dango"></i></div>
+			<div><i>cicon-mobile</i><i class="cicon cicon-size-medium cicon-mobile"></i></div>
+			<div><i>cicon-money</i><i class="cicon cicon-size-medium cicon-money"></i></div>
+			<div><i>cicon-moon</i><i class="cicon cicon-size-medium cicon-moon"></i></div>
+			<div><i>cicon-mouse</i><i class="cicon cicon-size-medium cicon-mouse"></i></div>
+			<div><i>cicon-music</i><i class="cicon cicon-size-medium cicon-music"></i></div>
+			<div><i>cicon-notice-active</i><i class="cicon cicon-size-medium cicon-notice-active"></i></div>
+			<div><i>cicon-notice-off</i><i class="cicon cicon-size-medium cicon-notice-off"></i></div>
+			<div><i>cicon-notice-on</i><i class="cicon cicon-size-medium cicon-notice-on"></i></div>
+			<div><i>cicon-notice-push</i><i class="cicon cicon-size-medium cicon-notice-push"></i></div>
+			<div><i>cicon-open-mouth</i><i class="cicon cicon-size-medium cicon-open-mouth"></i></div>
+			<div><i>cicon-palette</i><i class="cicon cicon-size-medium cicon-palette"></i></div>
+			<div><i>cicon-paper-plane</i><i class="cicon cicon-size-medium cicon-paper-plane"></i></div>
+			<div><i>cicon-pause</i><i class="cicon cicon-size-medium cicon-pause"></i></div>
+			<div><i>cicon-pencil</i><i class="cicon cicon-size-medium cicon-pencil"></i></div>
+			<div><i>cicon-phone</i><i class="cicon cicon-size-medium cicon-phone"></i></div>
+			<div><i>cicon-picture-square</i><i class="cicon cicon-size-medium cicon-picture-square"></i></div>
+			<div><i>cicon-picture</i><i class="cicon cicon-size-medium cicon-picture"></i></div>
+			<div><i>cicon-pie-chart</i><i class="cicon cicon-size-medium cicon-pie-chart"></i></div>
+			<div><i>cicon-pizza</i><i class="cicon cicon-size-medium cicon-pizza"></i></div>
+			<div><i>cicon-playlist</i><i class="cicon cicon-size-medium cicon-playlist"></i></div>
+			<div><i>cicon-play</i><i class="cicon cicon-size-medium cicon-play"></i></div>
+			<div><i>cicon-plug</i><i class="cicon cicon-size-medium cicon-plug"></i></div>
+			<div><i>cicon-plus</i><i class="cicon cicon-size-medium cicon-plus"></i></div>
+			<div><i>cicon-pokeball</i><i class="cicon cicon-size-medium cicon-pokeball"></i></div>
+			<div><i>cicon-pot</i><i class="cicon cicon-size-medium cicon-pot"></i></div>
+			<div><i>cicon-print</i><i class="cicon cicon-size-medium cicon-print"></i></div>
+			<div><i>cicon-prototype</i><i class="cicon cicon-size-medium cicon-prototype"></i></div>
+			<div><i>cicon-question</i><i class="cicon cicon-size-medium cicon-question"></i></div>
+			<div><i>cicon-quote-left</i><i class="cicon cicon-size-medium cicon-quote-left"></i></div>
+			<div><i>cicon-quote-right</i><i class="cicon cicon-size-medium cicon-quote-right"></i></div>
+			<div><i>cicon-rage</i><i class="cicon cicon-size-medium cicon-rage"></i></div>
+			<div><i>cicon-rainforce</i><i class="cicon cicon-size-medium cicon-rainforce"></i></div>
+			<div><i>cicon-random</i><i class="cicon cicon-size-medium cicon-random"></i></div>
+			<div><i>cicon-remove-cart</i><i class="cicon cicon-size-medium cicon-remove-cart"></i></div>
+			<div><i>cicon-rice-cracker</i><i class="cicon cicon-size-medium cicon-rice-cracker"></i></div>
+			<div><i>cicon-rocket</i><i class="cicon cicon-size-medium cicon-rocket"></i></div>
+			<div><i>cicon-scale</i><i class="cicon cicon-size-medium cicon-scale"></i></div>
+			<div><i>cicon-search-minus</i><i class="cicon cicon-size-medium cicon-search-minus"></i></div>
+			<div><i>cicon-search-plus</i><i class="cicon cicon-size-medium cicon-search-plus"></i></div>
+			<div><i>cicon-search</i><i class="cicon cicon-size-medium cicon-search"></i></div>
+			<div><i>cicon-server</i><i class="cicon cicon-size-medium cicon-server"></i></div>
+			<div><i>cicon-share</i><i class="cicon cicon-size-medium cicon-share"></i></div>
+			<div><i>cicon-shield</i><i class="cicon cicon-size-medium cicon-shield"></i></div>
+			<div><i>cicon-shopping-bag</i><i class="cicon cicon-size-medium cicon-shopping-bag"></i></div>
+			<div><i>cicon-sitemap</i><i class="cicon cicon-size-medium cicon-sitemap"></i></div>
+			<div><i>cicon-smile-alt</i><i class="cicon cicon-size-medium cicon-smile-alt"></i></div>
+			<div><i>cicon-smile-heart</i><i class="cicon cicon-size-medium cicon-smile-heart"></i></div>
+			<div><i>cicon-smile-plus</i><i class="cicon cicon-size-medium cicon-smile-plus"></i></div>
+			<div><i>cicon-smile</i><i class="cicon cicon-size-medium cicon-smile"></i></div>
+			<div><i>cicon-snow</i><i class="cicon cicon-size-medium cicon-snow"></i></div>
+			<div><i>cicon-speaker</i><i class="cicon cicon-size-medium cicon-speaker"></i></div>
+			<div><i>cicon-step-backward</i><i class="cicon cicon-size-medium cicon-step-backward"></i></div>
+			<div><i>cicon-step-forward</i><i class="cicon cicon-size-medium cicon-step-forward"></i></div>
+			<div><i>cicon-stop</i><i class="cicon cicon-size-medium cicon-stop"></i></div>
+			<div><i>cicon-subtract</i><i class="cicon cicon-size-medium cicon-subtract"></i></div>
+			<div><i>cicon-sunny-o</i><i class="cicon cicon-size-medium cicon-sunny-o"></i></div>
+			<div><i>cicon-sunny</i><i class="cicon cicon-size-medium cicon-sunny"></i></div>
+			<div><i>cicon-sunrise-o</i><i class="cicon cicon-size-medium cicon-sunrise-o"></i></div>
+			<div><i>cicon-sunrise</i><i class="cicon cicon-size-medium cicon-sunrise"></i></div>
+			<div><i>cicon-sunset</i><i class="cicon cicon-size-medium cicon-sunset"></i></div>
+			<div><i>cicon-sync</i><i class="cicon cicon-size-medium cicon-sync"></i></div>
+			<div><i>cicon-table</i><i class="cicon cicon-size-medium cicon-table"></i></div>
+			<div><i>cicon-tablet</i><i class="cicon cicon-size-medium cicon-tablet"></i></div>
+			<div><i>cicon-tag</i><i class="cicon cicon-size-medium cicon-tag"></i></div>
+			<div><i>cicon-target</i><i class="cicon cicon-size-medium cicon-target"></i></div>
+			<div><i>cicon-terminal</i><i class="cicon cicon-size-medium cicon-terminal"></i></div>
+			<div><i>cicon-text-align-center</i><i class="cicon cicon-size-medium cicon-text-align-center"></i></div>
+			<div><i>cicon-text-align-justify</i><i class="cicon cicon-size-medium cicon-text-align-justify"></i></div>
+			<div><i>cicon-text-align-left</i><i class="cicon cicon-size-medium cicon-text-align-left"></i></div>
+			<div><i>cicon-text-align-right</i><i class="cicon cicon-size-medium cicon-text-align-right"></i></div>
+			<div><i>cicon-text-size</i><i class="cicon cicon-size-medium cicon-text-size"></i></div>
+			<div><i>cicon-ticket</i><i class="cicon cicon-size-medium cicon-ticket"></i></div>
+			<div><i>cicon-tiled</i><i class="cicon cicon-size-medium cicon-tiled"></i></div>
+			<div><i>cicon-timeline</i><i class="cicon cicon-size-medium cicon-timeline"></i></div>
+			<div><i>cicon-tired</i><i class="cicon cicon-size-medium cicon-tired"></i></div>
+			<div><i>cicon-tornado</i><i class="cicon cicon-size-medium cicon-tornado"></i></div>
+			<div><i>cicon-trash</i><i class="cicon cicon-size-medium cicon-trash"></i></div>
+			<div><i>cicon-trophy</i><i class="cicon cicon-size-medium cicon-trophy"></i></div>
+			<div><i>cicon-tumbler-glass</i><i class="cicon cicon-size-medium cicon-tumbler-glass"></i></div>
+			<div><i>cicon-typhoon</i><i class="cicon cicon-size-medium cicon-typhoon"></i></div>
+			<div><i>cicon-umbrella</i><i class="cicon cicon-size-medium cicon-umbrella"></i></div>
+			<div><i>cicon-underline</i><i class="cicon cicon-size-medium cicon-underline"></i></div>
+			<div><i>cicon-union</i><i class="cicon cicon-size-medium cicon-union"></i></div>
+			<div><i>cicon-unlock</i><i class="cicon cicon-size-medium cicon-unlock"></i></div>
+			<div><i>cicon-upload</i><i class="cicon cicon-size-medium cicon-upload"></i></div>
+			<div><i>cicon-usb</i><i class="cicon cicon-size-medium cicon-usb"></i></div>
+			<div><i>cicon-user-minus</i><i class="cicon cicon-size-medium cicon-user-minus"></i></div>
+			<div><i>cicon-user-plus</i><i class="cicon cicon-size-medium cicon-user-plus"></i></div>
+			<div><i>cicon-users</i><i class="cicon cicon-size-medium cicon-users"></i></div>
+			<div><i>cicon-user</i><i class="cicon cicon-size-medium cicon-user"></i></div>
+			<div><i>cicon-vector</i><i class="cicon cicon-size-medium cicon-vector"></i></div>
+			<div><i>cicon-video</i><i class="cicon cicon-size-medium cicon-video"></i></div>
+			<div><i>cicon-vr</i><i class="cicon cicon-size-medium cicon-vr"></i></div>
+			<div><i>cicon-wallet</i><i class="cicon cicon-size-medium cicon-wallet"></i></div>
+			<div><i>cicon-warning</i><i class="cicon cicon-size-medium cicon-warning"></i></div>
+			<div><i>cicon-watch-alt</i><i class="cicon cicon-size-medium cicon-watch-alt"></i></div>
+			<div><i>cicon-watch</i><i class="cicon cicon-size-medium cicon-watch"></i></div>
+			<div><i>cicon-wind</i><i class="cicon cicon-size-medium cicon-wind"></i></div>
+			<div><i>cicon-wine-glass</i><i class="cicon cicon-size-medium cicon-wine-glass"></i></div>
+			<div><i>cicon-wrench</i><i class="cicon cicon-size-medium cicon-wrench"></i></div>
+			<div><i>cicon-yaki-dango</i><i class="cicon cicon-size-medium cicon-yaki-dango"></i></div>
+
+			<div><i>cicon-fantasy-arrow-up</i><i class="cicon cicon-size-medium cicon-fantasy-arrow-up"></i></div>
+			<div><i>cicon-fantasy-arrow-down</i><i class="cicon cicon-size-medium cicon-fantasy-arrow-down"></i></div>
+			<div><i>cicon-fantasy-arrow-left</i><i class="cicon cicon-size-medium cicon-fantasy-arrow-left"></i></div>
+			<div><i>cicon-fantasy-arrow-right</i><i class="cicon cicon-size-medium cicon-fantasy-arrow-right"></i></div>
+
+			<div><i>cicon-fantasy-marker-up</i><i class="cicon cicon-size-medium cicon-fantasy-marker-up"></i></div>
+			<div><i>cicon-fantasy-marker-down</i><i class="cicon cicon-size-medium cicon-fantasy-marker-down"></i></div>
+			<div><i>cicon-fantasy-marker-left</i><i class="cicon cicon-size-medium cicon-fantasy-marker-left"></i></div>
+			<div><i>cicon-fantasy-marker-right</i><i class="cicon cicon-size-medium cicon-fantasy-marker-right"></i></div>
+
+			<div><i>cicon-fantasy-chevron-up</i><i class="cicon cicon-size-medium cicon-fantasy-chevron-up"></i></div>
+			<div><i>cicon-fantasy-chevron-down</i><i class="cicon cicon-size-medium cicon-fantasy-chevron-down"></i></div>
+			<div><i>cicon-fantasy-chevron-left</i><i class="cicon cicon-size-medium cicon-fantasy-chevron-left"></i></div>
+			<div><i>cicon-fantasy-chevron-right</i><i class="cicon cicon-size-medium cicon-fantasy-chevron-right"></i></div>
+
+			<div><i>cicon-fantasy-radio-button</i><i class="cicon cicon-size-medium cicon-fantasy-radio-button"></i></div>
+			<div><i>cicon-fantasy-radio-button-checked</i><i class="cicon cicon-size-medium cicon-fantasy-radio-button-checked"></i></div>
+			<div><i>cicon-fantasy-radio-button-transition</i><i class="cicon cicon-size-medium cicon-fantasy-radio-button-transition"></i></div>
+			<div><i>cicon-fantasy-toggle-transition</i><i class="cicon cicon-size-medium cicon-fantasy-toggle-transition"></i></div>
+		</div>
+		<div class="thing-showcase framed-box-small">
+			<h2 id="section_icon_styling">Icon styling<sup>[<a href="#section_icon_styling">#</a>]</sup></h2>
+			<div class="test-crowndings-icon">
+				<i>Symbol only (inherents font size)</i>
+				<i class="cicon cicon-fantasy-crown"></i>
+			</div>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-xsmall</i>
+				<i class="cicon cicon-size-xsmall cicon-fantasy-crown"></i>
+			</div>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-small</i>
+				<i class="cicon cicon-size-small cicon-fantasy-crown"></i>
+			</div>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-medium</i>
+				<i class="cicon cicon-size-medium cicon-fantasy-crown"></i>
+			</div>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-large</i>
+				<i class="cicon cicon-size-large cicon-fantasy-crown"></i>
+			</div>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-xlarge</i>
+				<i class="cicon cicon-size-xlarge cicon-fantasy-crown"></i>
+			</div>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-xxlarge</i>
+				<i class="cicon cicon-size-xxlarge cicon-fantasy-crown"></i>
+			</div>
+			<br>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-large primary</i>
+				<i class="cicon cicon-size-large cicon-fantasy-crown primary"></i>
+			</div>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-large danger</i>
+				<i class="cicon cicon-size-large cicon-fantasy-crown danger"></i>
+			</div>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-large warning</i>
+				<i class="cicon cicon-size-large cicon-fantasy-crown warning"></i>
+			</div>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-large success</i>
+				<i class="cicon cicon-size-large cicon-fantasy-crown success"></i>
+			</div>
+			<br>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-large primary cicon-gradient</i>
+				<i class="cicon cicon-size-large cicon-fantasy-crown primary cicon-gradient"></i>
+			</div>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-large danger cicon-gradient</i>
+				<i class="cicon cicon-size-large cicon-fantasy-crown danger cicon-gradient"></i>
+			</div>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-large warning cicon-gradient</i>
+				<i class="cicon cicon-size-large cicon-fantasy-crown warning cicon-gradient"></i>
+			</div>
+			<div class="test-crowndings-icon">
+				<i>cicon-size-large success cicon-gradient</i>
+				<i class="cicon cicon-size-large cicon-fantasy-crown success cicon-gradient"></i>
+			</div>
+			<p>There's also a "dialog-cicon" which is like "cicon" except its defaults are "cicon-gradient primary cicon-size-xlarge"</p>
+			<div class="test-crowndings-icon">
+				<i>dialog-cicon cicon-fantasy-crown</i>
+				<i class="dialog-cicon cicon-fantasy-crown"></i>
+			</div>
+		</div>
+		<!--transitionful-->
+		<h2 class="text-fantasy" id="section_app_tabs">Transitionful transitionfuls<sup>[<a href="#section_transitionful_container">#</a>]</sup></h2>
+		<p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+		<div-transitionful id="app_tab_container_test" class="framed-box">
+			<div class="fantasy-input-group">
+				<button id="app_tab_container_test_b1" class="fantasy">Tab 1</button>
+				<button id="app_tab_container_test_b2" class="fantasy">Tab 2</button>
+				<button id="app_tab_container_test_b3" class="fantasy">Tab 3</button>
+			</div>
+			<div></div>
+		</div-transitionful>
+		<!-- <div class="test-boxes framed-box">*.framed-box</div> -->
+		<dialog inert id="main_loading_cover" aria-labelledby="main_loading_text">
+			<div class="main_loading_spinner" aria-label="Loading spinner">
+				<div class="main_loading_brand"></div>
+			</div>
+			<div id="main_loading_text"></div>
+		</dialog>
+	</body>
+</html>

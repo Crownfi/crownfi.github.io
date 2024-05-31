@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" fill="none" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+	<!-- Copyright © 2024 Crown Finance Ltd. All Rights Reserved. -->
+	<defs>
+		<linearGradient id="gr_d" gradientTransform="rotate(90)">
+			<stop stop-color="#B5B5B599"/>
+			<stop offset="1" stop-color="#6F6F6F99"/>
+		</linearGradient>
+		<linearGradient id="gr_a" gradientTransform="rotate(90)">
+			<stop stop-color="#E2D9B3"/>
+			<stop offset="1" stop-color="#F7A665"/>
+		</linearGradient>
+		<linearGradient id="gr_e" gradientTransform="rotate(90)">
+			<stop stop-color="#FFADAD"/>
+			<stop offset="1" stop-color="#FF7474"/>
+		</linearGradient>
+		<style>
+			#active:target ~ path { fill: url(#gr_a); }
+			#error:target ~ path { fill: url(#gr_e); }
+			#disabled:target ~ path { fill: url(#gr_d); }
+			#active_solid:target ~ path { fill: #FEBC86; }
+			#error_solid:target ~ path { fill: #FF6060; }
+			#disabled_solid:target ~ path { fill: #8D8D8D; }
+		</style>
+	</defs>
+	<g id="active" />
+	<g id="error" />
+	<g id="disabled" />
+	<g id="active_solid" />
+	<g id="error_solid" />
+	<g id="disabled_solid" />
+	<g />
+	<path id="path" d="m0.5 6c0 2.6956 1.5627 5.2308 4.166 6.8926l7.334 4.7012 7.3359-4.7031c2.601-1.673 4.1641-4.195 4.1641-6.8906h-1c0 2.3099-1.3333 4.5252-3.7051 6.0508l-6.7949 4.3555-6.7969-4.3574c-2.3695-1.5124-3.7031-3.7389-3.7031-6.0488z" fill="#fff"/>
+</svg>

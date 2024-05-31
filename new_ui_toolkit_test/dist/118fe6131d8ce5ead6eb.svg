@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="112" height="42" fill="none" version="1.1" viewBox="0 0 112 42" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- Copyright © 2024 Crown Finance Ltd. All Rights Reserved. -->
+	<defs>
+		<linearGradient id="gr_d" gradientTransform="rotate(90)">
+			<stop stop-color="#FDFDFD"/>
+			<stop offset="1" stop-color="#616161"/>
+		</linearGradient>
+		<linearGradient id="gr_a" gradientTransform="rotate(90)">
+			<stop stop-color="#E2D9B3"/>
+			<stop offset="1" stop-color="#F7A665"/>
+		</linearGradient>
+		<linearGradient id="gr_e" gradientTransform="rotate(90)">
+			<stop stop-color="#FFADAD"/>
+			<stop offset="1" stop-color="#FF7474"/>
+		</linearGradient>
+		<linearGradient id="gr_w" gradientTransform="rotate(90)">
+			<stop stop-color="#E4BF77"/>
+			<stop offset="1" stop-color="#FFBA33"/>
+		</linearGradient>
+		<linearGradient id="gr_s" gradientTransform="rotate(90)">
+			<stop stop-color="#B7FF6F"/>
+			<stop offset="1" stop-color="#66CC00"/>
+		</linearGradient>
+		<style>
+			#active:target ~ path { stroke: url(#gr_a); }
+			#danger:target ~ path { stroke: url(#gr_e); }
+			#warning:target ~ path { stroke: url(#gr_w); }
+			#success:target ~ path { stroke: url(#gr_s); }
+			#disabled:target ~ path { stroke: url(#gr_d); }
+		</style>
+	</defs>
+	<g id="disabled" />
+	<g id="active" />
+	<g id="danger" />
+	<g id="warning" />
+	<g id="success" />
+	<g />
+	<path id="path" d="m27.1183 0.5c-5.97113 0-11.5532 2.72244-15.3625 7.35897l-10.7557 13.141 11.2678 13.6667c3.80934 4.63657 8.87931 6.83333 14.8504 6.83333h58.2638c5.85631 0 10.8224-2.20345 14.5659-6.83333l11.052-13.6667-10.5497-13.141c-3.72763-4.64392-9.21192-7.35897-15.0682-7.35897z" fill="none" stroke="#454655"/>
+</svg>
