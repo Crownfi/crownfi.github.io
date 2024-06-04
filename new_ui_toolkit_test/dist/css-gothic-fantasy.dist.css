@@ -1463,7 +1463,7 @@ h1, h2, h3, h4, h5, h6 {
 
 :root.fancy-background::before {
 	position: fixed;
-	left: calc(-50vh - var(--cursor-window-pos-x-fraction) * var(--cursor-window-pos-fade-fraction) * 10vh);
+	left: calc(-50vh - var(--fancy-background-pos-x-fraction) * var(--fancy-background-pos-fade-fraction) * 10vh);
 	top: -25vh;
 	color: var(--colour-brand-palette-gold);
 	content: "";
@@ -1486,14 +1486,15 @@ h1, h2, h3, h4, h5, h6 {
 
 :root.fancy-background {
 	/* Default values so things still render even if the JS didn't load */
-    --cursor-window-pos-x-px: 0px;
-    --cursor-window-pos-y-px: 0px;
-    --cursor-window-pos-x-percentage: 0%;
-    --cursor-window-pos-y-percentage: 0%;
-    --cursor-window-pos-x-fraction: 0;
-    --cursor-window-pos-y-fraction: 0;
-    --cursor-window-pos-fade-percentage: 0%;
-    --cursor-window-pos-fade-fraction: 0;
+	/* --cursor-window-pos-x-px: 0px; */
+	/* --cursor-window-pos-y-px: 0px; */
+	/* --cursor-window-pos-fade-percentage: 0%; */
+
+	--fancy-background-pos-x-percentage: var(--cursor-window-pos-x-percentage, 0%);
+	--fancy-background-pos-y-percentage: var(--cursor-window-pos-y-percentage, 0%);
+	--fancy-background-pos-x-fraction: var(--cursor-window-pos-x-fraction, 0);
+	--fancy-background-pos-y-fraction: var(--cursor-window-pos-y-fraction, 0);
+	--fancy-background-pos-fade-fraction: var(--cursor-window-pos-fade-fraction, 0);
 	
 	/* These 2 variables derive everything else below */
 	--parallax-bg-scale: 1.1;
@@ -1507,13 +1508,13 @@ h1, h2, h3, h4, h5, h6 {
 	--parallax-bg-peak-to-peak: calc(var(--parallax-bg-offset-max) * 2);
 	--parallax-bg-offset-x: calc(
 		calc(
-			var(--cursor-window-pos-x-fraction) * var(--parallax-bg-peak-to-peak) - var(--parallax-bg-offset-max)
-		) * var(--cursor-window-pos-fade-fraction)
+			var(--fancy-background-pos-x-fraction) * var(--parallax-bg-peak-to-peak) - var(--parallax-bg-offset-max)
+		) * var(--fancy-background-pos-fade-fraction)
 	);
 	--parallax-bg-offset-y: calc(
 		calc(
-			var(--cursor-window-pos-y-fraction) * var(--parallax-bg-peak-to-peak) - var(--parallax-bg-offset-max)
-		) * var(--cursor-window-pos-fade-fraction)
+			var(--fancy-background-pos-y-fraction) * var(--parallax-bg-peak-to-peak) - var(--parallax-bg-offset-max)
+		) * var(--fancy-background-pos-fade-fraction)
 	);
 	/* Assumes the composited image is at a 2:3 ratio. The y size will be set to "auto". */
 	--parallax-bg-x-size: max(calc(100vw * var(--parallax-bg-scale)), calc(100vh * var(--parallax-bg-scale) * 3 / 2));
@@ -1523,15 +1524,15 @@ h1, h2, h3, h4, h5, h6 {
 		radial-gradient(
 			farthest-corner at
 				calc(
-					var(--cursor-window-pos-x-percentage) * var(--cursor-window-pos-fade-fraction) +
-					calc(75% * calc(1 - var(--cursor-window-pos-fade-fraction)))
+					var(--fancy-background-pos-x-percentage) * var(--fancy-background-pos-fade-fraction) +
+					calc(75% * calc(1 - var(--fancy-background-pos-fade-fraction)))
 				)
 				calc(
-					var(--cursor-window-pos-y-percentage) * var(--cursor-window-pos-fade-fraction) +
-					calc(50% * calc(1 - var(--cursor-window-pos-fade-fraction)))
+					var(--fancy-background-pos-y-percentage) * var(--fancy-background-pos-fade-fraction) +
+					calc(50% * calc(1 - var(--fancy-background-pos-fade-fraction)))
 				),
 			var(--colour-primary-800-a0) calc(
-					-1000% + min(var(--cursor-window-pos-x-percentage), 60%) * 16.5 * var(--cursor-window-pos-fade-fraction)
+					-1000% + min(var(--fancy-background-pos-x-percentage), 60%) * 16.5 * var(--fancy-background-pos-fade-fraction)
 			),
 			var(--colour-primary-800) 100%
 		) fixed,
@@ -1687,6 +1688,8 @@ dialog#main_loading_cover::backdrop {
 	background: var(--linear-gradient-active);
 	background-clip: text;
 	font-size: 144px;
+	width: 144px;
+	height: 144px;
 }
 #main_loading_cover .main_loading_brand::before {
 	content: "\e060";
@@ -2929,7 +2932,28 @@ input[type="range"]::-moz-range-progress {
 	color: var(--colour-neutral-secondary);
 	font-size: 14px;
 	line-height: 1;
+	box-sizing: border-box;
 	max-width: 100%;
+}
+label:has( > input:where(
+	[type="email"],
+	[type="datetime-local"],
+	[type="email"],
+	[type="month"],
+	[type="number"],
+	[type="password"],
+	[type="search"],
+	[type="tel"],
+	[type="text"],
+	[type="time"],
+	[type="url"],
+	[type="week"],
+)) {
+	font-size: 12px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	display: flex;
+	flex-direction: column;
 }
 
 :where(
@@ -3901,6 +3925,9 @@ dialog > h1:first-child + .dialog-cicon + p:not(:has( + p)) {
 dialog p {
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
+}
+dialog > p:first-child {
+	margin-top: 0px;
 }
 dialog.danger > h1:first-child,
 dialog.danger > h1:first-child::after {
