@@ -1,19 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="main-background-lazy-load">
 	<head>
 		<title>CrownFi element zoooooooooooo</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script async src="../dist/css-gothic-fantasy.dist.js"></script>
-		<script>
-			document.addEventListener("DOMContentLoaded", (ev) => {
-				document.documentElement.classList.toggle(
-					"fancy-background",
-					window.enable_fancy_background_check.checked
-				);
-			});
-		</script>
-		<link rel="stylesheet" href="../dist/css-gothic-fantasy.dist.css">
+		<link rel="stylesheet" href="../styles/index.css">
 		<style>
 			.test-boxes {
 				width: 280px;
@@ -88,11 +80,18 @@
 			<input
 				id="enable_fancy_background_check"
 				oninput="
+					document.documentElement.classList.value = '';
 					document.documentElement.classList.toggle(
-						'fancy-background',
+						'fancy-background-lazy-load',
 						window.enable_fancy_background_check.checked
-					)
+					);
+					document.documentElement.classList.toggle(
+						'main-background-lazy-load',
+						!window.enable_fancy_background_check.checked
+					);
+					$loadBackgrounds();
 				"
+				autocomplete="off"
 				type="checkbox"
 			>
 		</label>
@@ -195,6 +194,13 @@
 					<dropdown-menu-inner>
 						<dropdown-menu-item><span>Woah!</span><input type="radio" name="choice" value="2"></dropdown-menu-item>
 						<dropdown-menu-item><span>Amazing!</span><input type="radio" name="choice" value="3"></dropdown-menu-item>
+					</dropdown-menu-inner>
+				</dropdown-menu-item>
+				<dropdown-menu-item>
+					Could you have even more choices?
+					<dropdown-menu-inner>
+						<dropdown-menu-item disabled><span>Disabled option</span></dropdown-menu-item>
+						<dropdown-menu-item><span>An option with lots of text and if you're on mobile it will probably overflow</span></dropdown-menu-item>
 					</dropdown-menu-inner>
 				</dropdown-menu-item>
 				<hr>
@@ -413,7 +419,7 @@
 					<button class="small" autofocus>OK</button>
 				</form>
 			</dialog>
-
+			<button onclick="$prompt('Ayy lmao', 'value here')">Ditto</button>
 			<p>Here's what an error message with a stack trace would probably look like. Textareas which are direct children of dialog elements aren't resizable.</p>
 			<button class="danger" onclick="window.dialog_example_stack_trace.showModal()">Error message</button>
 			<dialog class="danger" id="dialog_example_stack_trace">

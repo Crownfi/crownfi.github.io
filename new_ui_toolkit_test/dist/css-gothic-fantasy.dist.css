@@ -1457,13 +1457,39 @@ h1, h2, h3, h4, h5, h6 {
 /* Copyright © 2024 Crown Finance Ltd. All Rights Reserved. */
 :root {
 	min-height: 100vh;
-	background: var(--colour-brand-palette-obsidian) url(52a0e33423d1a4ea9b6b.png) 100% 100% / cover fixed no-repeat;
+	background: var(--colour-brand-palette-obsidian);
 	/*transform: perspective(100px) translate3d(0px, 0px, -100px);*/
 }
+.main-background-lazy-load {
+	background: var(--colour-brand-palette-obsidian) url(f29f828fe775480cd23c.jpg) 100% 100% / cover fixed no-repeat;
+}
+.main-background-lazy-load-2 {
+	background: var(--colour-brand-palette-obsidian) url(8d82a3a29e428fa0cc67.jpg) 100% 100% / cover fixed no-repeat;
+}
+.main-background {
+	background: var(--colour-brand-palette-obsidian) url(12769bf1ec4219e22320.png) 100% 100% / cover fixed no-repeat;
+}
 
+.fancy-background-lazy-load {
+	background: var(--colour-brand-palette-obsidian) url(0e6d80a6b18317bd44a5.jpg) 50% 50% / cover fixed no-repeat;
+}
+.fancy-background-lazy-load-2 {
+	background: var(--colour-brand-palette-obsidian) url(cc6bbdbea5a50b87a374.jpg) 50% 50% / cover fixed no-repeat;
+}
+.fancy-background-lazy-load-3 {
+	background:
+		url(f61168fa8332267778c5.png) 100% 100% / cover fixed no-repeat,
+		url(4ad9ee78a7dd7cbd328f.png) 100% 100% / cover fixed no-repeat,
+		url(42a9990f2445c9968309.png) 100% 100% / cover fixed no-repeat,
+		url(bfd0dedd68a42c6bfd5d.png) 100% 100% / cover fixed no-repeat,
+		var(--colour-brand-palette-obsidian);
+}
+
+:root.fancy-background-lazy-load::before,
+:root.fancy-background-lazy-load-2::before,
 :root.fancy-background::before {
 	position: fixed;
-	left: calc(-50vh - var(--fancy-background-pos-x-fraction) * var(--fancy-background-pos-fade-fraction) * 10vh);
+	left: calc(-50vh - var(--fancy-background-pos-x-fraction, 0) * var(--fancy-background-pos-fade-fraction, 0) * 10vh);
 	top: -25vh;
 	color: var(--colour-brand-palette-gold);
 	content: "";
@@ -1536,28 +1562,28 @@ h1, h2, h3, h4, h5, h6 {
 			),
 			var(--colour-primary-800) 100%
 		) fixed,
-		url(bb745dbed3b341e096ba.png)
+		url(f61168fa8332267778c5.png)
 			/* pos-x */ calc(60% + calc(var(--parallax-bg-offset-x) * 1))
 			/* pos-y */ calc(50% - calc(var(--parallax-bg-offset-y) * 1)) /
 			/* size-x */ var(--parallax-bg-x-size)
 			/* size-y */ auto
 			/* attachment */ fixed
 			/* repeat*/ no-repeat,
-		url(619eb03c82007ba7155f.png)
+		url(4ad9ee78a7dd7cbd328f.png)
 			/* pos-x */ calc(60% + calc(var(--parallax-bg-offset-x) * 0.8))
 			/* pos-y */ calc(50% - calc(var(--parallax-bg-offset-y) * 0.8)) /
 			/* size-x */ var(--parallax-bg-x-size)
 			/* size-y */ auto
 			/* attachment */ fixed
 			/* repeat*/ no-repeat,
-		url(cb0f8ca84859af977dd1.png)
+		url(42a9990f2445c9968309.png)
 			/* pos-x */ calc(60% + calc(var(--parallax-bg-offset-x) * 0.4))
 			/* pos-y */ calc(50% - calc(var(--parallax-bg-offset-y) * 0.4)) /
 			/* size-x */ var(--parallax-bg-x-size)
 			/* size-y */ auto
 			/* attachment */ fixed
 			/* repeat*/ no-repeat,
-		url(4f26c7ddb3a9a8792532.png)
+		url(bfd0dedd68a42c6bfd5d.png)
 			/* pos-x */ calc(60% + calc(var(--parallax-bg-offset-x) * 0.2))
 			/* pos-y */ calc(50% - calc(var(--parallax-bg-offset-y) * 0.2)) /
 			/* size-x */ var(--parallax-bg-x-size)
@@ -3200,7 +3226,7 @@ select *:is(:hover, :active, :focus, :checked) {
 	border-image-source: url(5c3ca482796e44f1dcc0.svg#warning);
 	background: var(--input-group-bg-warning);
 }
-.fantasy-input-group:has(:focus), /* Change to :focus-visible? */
+.fantasy-input-group:has(:focus-visible), /* Change to :focus? */
 .fantasy-input-group:has(:where(input, button, select):hover)
 /*.fantasy-input-group:has(button:hover)*/ {
 	border-image-source: url(5c3ca482796e44f1dcc0.svg#active);
@@ -3490,6 +3516,8 @@ active-dropdown-menu {
 	background-color: var(--colour-primary-700);
 	border: 1px solid var(--colour-primary-500);
 	border-radius: 4px;
+	box-sizing: border-box;
+	max-width: 100vw;
 }
 /*
 	text-decor.css checks for :not(.pattern-repeat) for the min-width.
@@ -3508,6 +3536,10 @@ active-dropdown-menu-item {
 	justify-content: space-between;
 	align-items: center;
 }
+active-dropdown-menu-item, active-dropdown-menu-item * {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 active-dropdown-menu-item:has(active-dropdown-menu)::after {
 	margin-left: 0.75em;
 	margin-right: 0.25em;
@@ -3525,10 +3557,11 @@ active-dropdown-menu-item:has(active-dropdown-menu:not([inert])) {
 	color: var(--colour-secondary-600);
 }
 /* menu items can have a "disabled" attribute, though this doesn't work with the :disabled psudo class */
-active-dropdown-menu-item[disabled] {
+active-dropdown-menu-item[disabled],
+active-dropdown-menu-item[disabled]:has(active-dropdown-menu:not([inert])) {
 	cursor: not-allowed;
 	color: var(--colour-neutral-secondary);
-	color: var(--colour-neutral-primary);
+	/*color: var(--colour-neutral-primary);*/
 }
 
 /* classes on the <dropdown-menu> are copied to the <active-dropdown-menu> */
