@@ -701,17 +701,29 @@ async function setupFancyBackground(checkOrientationPermission = false) {
         document.documentElement.style.setProperty("--fancy-background-pos-fade-fraction", "1");
     });
     if (typeof DeviceOrientationEvent.requestPermission == "function") {
+        DeviceOrientationEvent.requestPermission();
+        document.addEventListener("click", (_) => {
+            DeviceOrientationEvent.requestPermission();
+        }, { once: true });
+        /*
         console.log("Fancy background: DeviceOrientationEvent.requestPermission");
-        switch (await DeviceOrientationEvent.requestPermission()) {
+        switch (await (DeviceOrientationEvent as any).requestPermission()) {
             case "prompt":
                 console.log("Fancy background: Device asked for prompt");
-                if (!checkOrientationPermission || !(await (0,msgbox.confirm)("Device orientation access requested", "The background can react to your device's accelerometer.\n" +
-                    "Would you like to see it?", "question"))) {
+                if (!checkOrientationPermission || !(await confirm(
+                    "Device orientation access requested",
+                    "The background can react to your device's accelerometer.\n" +
+                    "Would you like to see it?",
+                    "question"
+                ))) {
                     return;
                 }
-                switch (await DeviceOrientationEvent.requestPermission()) {
+                switch (await (DeviceOrientationEvent as any).requestPermission()) {
                     case "prompt":
-                        (0,msgbox.alert)("Something weird happened", "Your device asked me to prompt for permissions again, not sure how to handle this situation.");
+                        alert(
+                            "Something weird happened",
+                            "Your device asked me to prompt for permissions again, not sure how to handle this situation."
+                        );
                         break;
                     case "denied":
                         if (checkOrientationPermission) {
@@ -719,7 +731,7 @@ async function setupFancyBackground(checkOrientationPermission = false) {
                         }
                         break;
                     default:
-                    // yay?
+                        // yay?
                 }
                 break;
             case "denied":
@@ -730,8 +742,9 @@ async function setupFancyBackground(checkOrientationPermission = false) {
                 break;
             default:
                 console.log("Fancy background: Device says we where granted maybe? Yay?");
-            // yay?
+                // yay?
         }
+        */
     }
 }
 function complainAboutOrientationDenied() {
