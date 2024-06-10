@@ -587,9 +587,38 @@ function makeTempPixel() {
     document.body.append(div);
     return div;
 }
+function ignoreSafariMobileViewportHeightLies() {
+    if (document.documentElement.style.getPropertyValue("--think-different-100vh")) {
+        // Hack already running
+        return;
+    }
+    const tmpDiv = document.createElement("div");
+    tmpDiv.style.display = "none";
+    tmpDiv.style.height = "100vh";
+    document.body.append(tmpDiv);
+    const actual100vh = getComputedStyle(tmpDiv).height;
+    tmpDiv.remove();
+    if (Math.ceil(Number(actual100vh.substring(0, actual100vh.length - 2))) <= window.innerHeight) {
+        // Browser isn't lying to us about 100vh (for now)
+        return;
+    }
+    document.documentElement.style.setProperty("--think-different-100vh", window.innerHeight + "px");
+    let resizeDelay = null;
+    window.addEventListener("resize", (_) => {
+        if (resizeDelay != null) {
+            clearTimeout(resizeDelay);
+        }
+        resizeDelay = setTimeout(() => {
+            resizeDelay = null;
+            document.documentElement.style.setProperty("--think-different-100vh", window.innerHeight + "px");
+        }, 33);
+    });
+}
 async function loadBackgrounds() {
     const bgElem = document.documentElement;
     await PAGE_FULLY_LOADED;
+    // Hooray for Safari! Yaay! Woo!
+    ignoreSafariMobileViewportHeightLies();
     if (bgElem.classList.contains("main-background-lazy-load")) {
         await backgroundImagesLoaded(bgElem);
         // webpack mangles the names of the images, so getting the computed URL is the most reliable way to do this

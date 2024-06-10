@@ -1474,8 +1474,7 @@ h1, h2, h3, h4, h5, h6 {
   \****************************************************************************/
 /* Copyright © 2024 Crown Finance Ltd. All Rights Reserved. */
 :root {
-	--think-different-100vh: calc(100vh - env(safe-area-inset-bottom, 0px));
-
+	--think-different-100vh: 100vh;
 	min-height: var(--think-different-100vh);
 	background: var(--colour-brand-palette-obsidian);
 	/*transform: perspective(100px) translate3d(0px, 0px, -100px);*/
