@@ -1474,7 +1474,9 @@ h1, h2, h3, h4, h5, h6 {
   \****************************************************************************/
 /* Copyright © 2024 Crown Finance Ltd. All Rights Reserved. */
 :root {
-	min-height: 100vh;
+	--think-different-100vh: calc(100vh - env(safe-area-inset-bottom, 0px));
+
+	min-height: var(--think-different-100vh);
 	background: var(--colour-brand-palette-obsidian);
 	/*transform: perspective(100px) translate3d(0px, 0px, -100px);*/
 }
@@ -1486,7 +1488,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+	height: var(--think-different-100vh);
 	z-index: -2;
 	padding: 0;
 	margin: 0;
@@ -1499,7 +1501,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+	height: var(--think-different-100vh);
 	z-index: -2;
 	padding: 0;
 	margin: 0;
@@ -1512,7 +1514,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+	height: var(--think-different-100vh);
 	z-index: -2;
 	padding: 0;
 	margin: 0;
@@ -1526,7 +1528,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+	height: var(--think-different-100vh);
 	z-index: -2;
 	padding: 0;
 	margin: 0;
@@ -1539,7 +1541,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+	height: var(--think-different-100vh);
 	z-index: -2;
 	padding: 0;
 	margin: 0;
@@ -1552,7 +1554,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+	height: var(--think-different-100vh);
 	z-index: -2;
 	padding: 0;
 	margin: 0;
@@ -1599,6 +1601,13 @@ h1, h2, h3, h4, h5, h6 {
 	--cursor-fade-in-time: 0.75s;
 	--cursor-fade-out-time: 1.5s;
 	--cursor-fade-function: ease-in-out;
+
+	/* Default values so things still render even if the JS didn't load */
+	--fancy-background-pos-x-percentage: var(--cursor-window-pos-x-percentage, 0%);
+	--fancy-background-pos-y-percentage: var(--cursor-window-pos-y-percentage, 0%);
+	--fancy-background-pos-x-fraction: var(--cursor-window-pos-x-fraction, 0);
+	--fancy-background-pos-y-fraction: var(--cursor-window-pos-y-fraction, 0);
+	--fancy-background-pos-fade-fraction: var(--cursor-window-pos-fade-fraction, 0);
 }
 
 :root.fancy-background::before {
@@ -1608,22 +1617,10 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+	height: var(--think-different-100vh);
 	z-index: -2;
 	padding: 0;
 	margin: 0;
-
-
-	/* Default values so things still render even if the JS didn't load */
-	/* --cursor-window-pos-x-px: 0px; */
-	/* --cursor-window-pos-y-px: 0px; */
-	/* --cursor-window-pos-fade-percentage: 0%; */
-
-	--fancy-background-pos-x-percentage: var(--cursor-window-pos-x-percentage, 0%);
-	--fancy-background-pos-y-percentage: var(--cursor-window-pos-y-percentage, 0%);
-	--fancy-background-pos-x-fraction: var(--cursor-window-pos-x-fraction, 0);
-	--fancy-background-pos-y-fraction: var(--cursor-window-pos-y-fraction, 0);
-	--fancy-background-pos-fade-fraction: var(--cursor-window-pos-fade-fraction, 0);
 	
 	/* These 2 variables derive everything else below */
 	--parallax-bg-scale: 1.1;
