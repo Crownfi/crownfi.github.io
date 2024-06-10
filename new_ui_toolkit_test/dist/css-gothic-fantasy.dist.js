@@ -2,6 +2,17 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./styles/index.css":
+/*!**************************!*\
+  !*** ./styles/index.css ***!
+  \**************************/
+/***/ (() => {
+
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/_test_only.ts":
 /*!***************************!*\
   !*** ./src/_test_only.ts ***!
@@ -532,10 +543,7 @@ else {
     listenToDOMChanges();
 }
 
-// EXTERNAL MODULE: ./src/msgbox.ts
-var msgbox = __webpack_require__("./src/msgbox.ts");
 ;// CONCATENATED MODULE: ./src/background.ts
-
 
 const DEVICE_POINTER_TYPE = new Promise(resolve => {
     window.addEventListener("touchstart", () => {
@@ -556,7 +564,11 @@ const PAGE_FULLY_LOADED = new Promise(resolve => {
     }
 });
 async function backgroundImagesLoaded(elem) {
-    await Promise.all([...getComputedStyle(elem).backgroundImage.matchAll(/url\(\s*(['"]?)(.*?)\1\s*\)/g)]
+    await Promise.all([
+        ...getComputedStyle(elem).backgroundImage.matchAll(/url\(\s*(['"]?)(.*?)\1\s*\)/g),
+        ...getComputedStyle(elem, "::before").backgroundImage.matchAll(/url\(\s*(['"]?)(.*?)\1\s*\)/g),
+        ...getComputedStyle(elem, "::after").backgroundImage.matchAll(/url\(\s*(['"]?)(.*?)\1\s*\)/g)
+    ]
         .map(match => match[2])
         .map(url => {
         const img = document.createElement("img");
@@ -571,6 +583,7 @@ function makeTempPixel() {
     div.style.left = "0px";
     div.style.width = "1px";
     div.style.height = "1px";
+    div.style.overflow = "hidden";
     document.body.append(div);
     return div;
 }
@@ -705,53 +718,6 @@ async function setupFancyBackground(checkOrientationPermission = false) {
         document.addEventListener("click", (_) => {
             DeviceOrientationEvent.requestPermission();
         }, { once: true });
-        /*
-        console.log("Fancy background: DeviceOrientationEvent.requestPermission");
-        switch (await (DeviceOrientationEvent as any).requestPermission()) {
-            case "prompt":
-                console.log("Fancy background: Device asked for prompt");
-                if (!checkOrientationPermission || !(await confirm(
-                    "Device orientation access requested",
-                    "The background can react to your device's accelerometer.\n" +
-                    "Would you like to see it?",
-                    "question"
-                ))) {
-                    return;
-                }
-                switch (await (DeviceOrientationEvent as any).requestPermission()) {
-                    case "prompt":
-                        alert(
-                            "Something weird happened",
-                            "Your device asked me to prompt for permissions again, not sure how to handle this situation."
-                        );
-                        break;
-                    case "denied":
-                        if (checkOrientationPermission) {
-                            complainAboutOrientationDenied();
-                        }
-                        break;
-                    default:
-                        // yay?
-                }
-                break;
-            case "denied":
-                console.log("Fancy background: Device denied!!!!");
-                if (checkOrientationPermission) {
-                    complainAboutOrientationDenied();
-                }
-                break;
-            default:
-                console.log("Fancy background: Device says we where granted maybe? Yay?");
-                // yay?
-        }
-        */
-    }
-}
-function complainAboutOrientationDenied() {
-    if (!localStorage.getItem("user_denied_fancy_background")) {
-        (0,msgbox.alert)("Device orientation access denied", "The background could react to your device's accelerometer, but permission to access the " +
-            "accelerometer data was denied.", "info");
-        localStorage.setItem("user_denied_fancy_background", "1");
     }
 }
 
@@ -4162,7 +4128,8 @@ customElements.define("active-dropdown-form-context", ActiveDropdownMenuFormCont
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module used 'module' so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/_test_only.ts");
+/******/ 	__webpack_require__("./src/_test_only.ts");
+/******/ 	var __webpack_exports__ = __webpack_require__("./styles/index.css");
 /******/ 	
 /******/ })()
 ;
