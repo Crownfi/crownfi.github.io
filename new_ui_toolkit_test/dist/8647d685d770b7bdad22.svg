@@ -15,7 +15,7 @@
 				width: 128px; height: 128px;
 				background: conic-gradient(#FCAC6A00, #FCAC6A);
 			}
-			/* A whole other seperate <g> because SAFARI THINKS DIFFERENT */
+			/* A whole other separate element because SAFARI THINKS DIFFERENT */
 			.fill-rotate {
 				animation: rotate 1.25s linear 0s infinite normal;
 				transform-origin: center;
