@@ -1492,6 +1492,9 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	margin: 0;
 	background: var(--colour-brand-palette-obsidian) url(f29f828fe775480cd23c.jpg) 100% 100% / cover fixed no-repeat;
+
+	box-sizing: border-box;
+	border: 16px dashed red;
 }
 .main-background-lazy-load-2::before {
 	display: block;
