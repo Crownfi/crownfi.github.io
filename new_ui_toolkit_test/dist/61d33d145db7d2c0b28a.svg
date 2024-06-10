@@ -14,14 +14,19 @@
 			.fill-gradient {
 				width: 128px; height: 128px;
 				background: conic-gradient(#FCAC6A00, #FCAC6A);
-				transform-origin: center;
+			}
+			/* A whole other seperate <g> because SAFARI THINKS DIFFERENT */
+			.fill-rotate {
 				animation: rotate 1.25s linear 0s infinite normal;
+				transform-origin: center;
 			}
 		</style>
 	</defs>
 	<g clip-path="url(#clip)">
-		<foreignObject class="fill-rotate" x="0" y="0" width="128" height="128">
-			<div class="fill-gradient" xmlns="http://www.w3.org/1999/xhtml" />
-		</foreignObject>
+		<g class="fill-rotate">
+			<foreignObject x="0" y="0" width="128" height="128">
+				<div class="fill-gradient" xmlns="http://www.w3.org/1999/xhtml" />
+			</foreignObject>
+		</g>
 	</g>
 </svg>

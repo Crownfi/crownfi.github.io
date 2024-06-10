@@ -107,7 +107,7 @@
   \*****************************************************************************/
 /* Copyright © 2024 Crown Finance Ltd. All Rights Reserved. */
 .loading-spinner {
-	content: url(6d56731594a80150934d.svg);
+	content: url(61d33d145db7d2c0b28a.svg);
 }
 .lazy-loading {
 	/* Makes the position, width, and height for the ::before element work */
@@ -125,7 +125,7 @@
 	background-color: var(--colour-primary-900-a50);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url(6d56731594a80150934d.svg);
+	background-image: url(61d33d145db7d2c0b28a.svg);
 	background-size: 48px auto;
 	border-radius: inherit;
 	backdrop-filter: grayscale(0.1) contrast(0.8) blur(3px);
@@ -142,7 +142,7 @@
 	display: inline-block;
 	color: transparent;
 	content: "-";
-	background: url(6d56731594a80150934d.svg) center / auto 100% no-repeat;
+	background: url(61d33d145db7d2c0b28a.svg) center / auto 100% no-repeat;
 	height: 1.2em;
 	width: 1.2em;
 }
