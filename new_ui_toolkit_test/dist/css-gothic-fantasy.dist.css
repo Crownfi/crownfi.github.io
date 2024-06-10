@@ -1479,7 +1479,10 @@ h1, h2, h3, h4, h5, h6 {
 	background: var(--colour-brand-palette-obsidian);
 	/*transform: perspective(100px) translate3d(0px, 0px, -100px);*/
 }
-/* Using ::before for the background because safari mobile "thinks different" */
+/*
+	Using ::before for the background because safari mobile "thinks different" and says that the viewport height is
+	actually the height of the entire scrollable area. This is obviously a lie. This also applies to fixed backgrounds.
+*/
 .main-background-lazy-load::before {
 	display: block;
 	content: "\a0";
@@ -1491,10 +1494,8 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: -2;
 	padding: 0;
 	margin: 0;
-	background: var(--colour-brand-palette-obsidian) url(f29f828fe775480cd23c.jpg) 100% 100% / cover fixed no-repeat;
-
-	box-sizing: border-box;
-	border: 16px dashed red;
+	border: 0;
+	background: var(--colour-brand-palette-obsidian) url(f29f828fe775480cd23c.jpg) 100% 100% / cover scroll no-repeat;
 }
 .main-background-lazy-load-2::before {
 	display: block;
@@ -1507,11 +1508,8 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: -2;
 	padding: 0;
 	margin: 0;
-	background: var(--colour-brand-palette-obsidian) url(8d82a3a29e428fa0cc67.jpg) 100% 100% / cover fixed no-repeat;
-
-	box-sizing: border-box;
-	border: 16px dashed red;
-
+	border: 0;
+	background: var(--colour-brand-palette-obsidian) url(8d82a3a29e428fa0cc67.jpg) 100% 100% / cover scroll no-repeat;
 }
 .main-background::before {
 	display: block;
@@ -1524,11 +1522,8 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: -2;
 	padding: 0;
 	margin: 0;
-	background: var(--colour-brand-palette-obsidian) url(12769bf1ec4219e22320.png) 100% 100% / cover fixed no-repeat;
-
-	box-sizing: border-box;
-	border: 16px dashed red;
-
+	border: 0;
+	background: var(--colour-brand-palette-obsidian) url(12769bf1ec4219e22320.png) 100% 100% / cover scroll no-repeat;
 }
 
 .fancy-background-lazy-load::before {
@@ -1542,6 +1537,7 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: -2;
 	padding: 0;
 	margin: 0;
+	border: 0;
 	background: var(--colour-brand-palette-obsidian) url(0e6d80a6b18317bd44a5.jpg) 50% 50% / cover fixed no-repeat;
 }
 .fancy-background-lazy-load-2::before {
@@ -1555,7 +1551,8 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: -2;
 	padding: 0;
 	margin: 0;
-	background: var(--colour-brand-palette-obsidian) url(cc6bbdbea5a50b87a374.jpg) 50% 50% / cover fixed no-repeat;
+	border: 0;
+	background: var(--colour-brand-palette-obsidian) url(cc6bbdbea5a50b87a374.jpg) 50% 50% / cover scroll no-repeat;
 }
 .fancy-background-lazy-load-3::before {
 	display: block;
@@ -1568,11 +1565,12 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: -2;
 	padding: 0;
 	margin: 0;
+	border: 0;
 	background:
-		url(f61168fa8332267778c5.png) 50% 50% / cover fixed no-repeat,
-		url(4ad9ee78a7dd7cbd328f.png) 50% 50% / cover fixed no-repeat,
-		url(42a9990f2445c9968309.png) 50% 50% / cover fixed no-repeat,
-		url(bfd0dedd68a42c6bfd5d.png) 50% 50% / cover fixed no-repeat,
+		url(f61168fa8332267778c5.png) 50% 50% / cover scroll no-repeat,
+		url(4ad9ee78a7dd7cbd328f.png) 50% 50% / cover scroll no-repeat,
+		url(42a9990f2445c9968309.png) 50% 50% / cover scroll no-repeat,
+		url(bfd0dedd68a42c6bfd5d.png) 50% 50% / cover scroll no-repeat,
 		var(--colour-brand-palette-obsidian);
 }
 :root::before {
@@ -1631,6 +1629,7 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: -2;
 	padding: 0;
 	margin: 0;
+	border: 0;
 	
 	/* These 2 variables derive everything else below */
 	--parallax-bg-scale: 1.1;
@@ -1666,34 +1665,34 @@ h1, h2, h3, h4, h5, h6 {
 					-1000% + min(var(--fancy-background-pos-x-percentage), 60%) * 16.5 * var(--fancy-background-pos-fade-fraction)
 			),
 			var(--colour-primary-800) 100%
-		) fixed,
+		) scroll,
 		url(f61168fa8332267778c5.png)
 			/* pos-x */ calc(60% + calc(var(--parallax-bg-offset-x) * 1))
 			/* pos-y */ calc(50% - calc(var(--parallax-bg-offset-y) * 1)) /
 			/* size-x */ var(--parallax-bg-x-size)
 			/* size-y */ auto
-			/* attachment */ fixed
+			/* attachment */ scroll
 			/* repeat*/ no-repeat,
 		url(4ad9ee78a7dd7cbd328f.png)
 			/* pos-x */ calc(60% + calc(var(--parallax-bg-offset-x) * 0.8))
 			/* pos-y */ calc(50% - calc(var(--parallax-bg-offset-y) * 0.8)) /
 			/* size-x */ var(--parallax-bg-x-size)
 			/* size-y */ auto
-			/* attachment */ fixed
+			/* attachment */ scroll
 			/* repeat*/ no-repeat,
 		url(42a9990f2445c9968309.png)
 			/* pos-x */ calc(60% + calc(var(--parallax-bg-offset-x) * 0.4))
 			/* pos-y */ calc(50% - calc(var(--parallax-bg-offset-y) * 0.4)) /
 			/* size-x */ var(--parallax-bg-x-size)
 			/* size-y */ auto
-			/* attachment */ fixed
+			/* attachment */ scroll
 			/* repeat*/ no-repeat,
 		url(bfd0dedd68a42c6bfd5d.png)
 			/* pos-x */ calc(60% + calc(var(--parallax-bg-offset-x) * 0.2))
 			/* pos-y */ calc(50% - calc(var(--parallax-bg-offset-y) * 0.2)) /
 			/* size-x */ var(--parallax-bg-x-size)
 			/* size-y */ auto
-			/* attachment */ fixed
+			/* attachment */ scroll
 			/* repeat*/ no-repeat,
 		var(--colour-brand-palette-obsidian);
 }

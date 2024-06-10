@@ -543,10 +543,7 @@ else {
     listenToDOMChanges();
 }
 
-// EXTERNAL MODULE: ./src/msgbox.ts
-var msgbox = __webpack_require__("./src/msgbox.ts");
 ;// CONCATENATED MODULE: ./src/background.ts
-
 
 const DEVICE_POINTER_TYPE = new Promise(resolve => {
     window.addEventListener("touchstart", () => {
@@ -600,7 +597,7 @@ function ignoreSafariMobileViewportHeightLies() {
     tmpDiv.style.height = "100vh";
     document.body.append(tmpDiv);
     const actual100vh = getComputedStyle(tmpDiv).height;
-    (0,msgbox.alert)("You alright, buddy?", "100vh: " + actual100vh + "\nwindow.innerHeight: " + window.innerHeight + "px");
+    // alert("You alright, buddy?", "100vh: " + actual100vh + "\nwindow.innerHeight: " + window.innerHeight + "px");
     tmpDiv.remove();
     if (Math.ceil(Number(actual100vh.substring(0, actual100vh.length - 2))) <= window.innerHeight) {
         // Browser isn't lying to us about 100vh (for now)
