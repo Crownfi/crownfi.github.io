@@ -135,6 +135,152 @@
 		<div class="test-boxes rounded-box">*.rounded-box</div>
 
 		<div class="thing-showcase framed-box-small">
+			<h2 id="section_important_note">Important notes<sup>[<a href="#section_important_note">#</a>]</sup></h2>
+
+			<div class="important-note">
+				<p>This note is somewhat important</p>
+			</div>
+			<div class="important-note danger">
+				<p>This note is somewhat important</p>
+			</div>
+			<div class="important-note warning">
+				<p>This note is somewhat important</p>
+			</div>
+			<div class="important-note success">
+				<p>This note is somewhat important</p>
+			</div>
+		</div>
+		<div class="thing-showcase framed-box-small">
+			<h2 id="section_tables">Tables<sup>[<a href="#section_tables">#</a>]</sup></h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Age</th>
+						<th>Country</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>John Doe</td>
+						<td>30</td>
+						<td>USA</td>
+					</tr>
+					<tr>
+						<td>Jane Smith</td>
+						<td>25</td>
+						<td>UK</td>
+					</tr>
+					<tr>
+						<td>Alice Johnson</td>
+						<td>35</td>
+						<td>Canada</td>
+					</tr>
+					<tr class="danger">
+						<td>John Doe</td>
+						<td>30</td>
+						<td>USA</td>
+					</tr>
+					<tr class="warning">
+						<td>Jane Smith</td>
+						<td>25</td>
+						<td>UK</td>
+					</tr>
+					<tr class="success">
+						<td>Alice Johnson</td>
+						<td>35</td>
+						<td>Canada</td>
+					</tr>
+					<tr>
+						<th>John Doe</th>
+						<td>30</td>
+						<td class="danger">USA</td>
+					</tr>
+					<tr>
+						<th>Jane Smith</th>
+						<td>25</td>
+						<td class="warning">UK</td>
+					</tr>
+					<tr>
+						<th>Alice Johnson</th>
+						<td>35</td>
+						<td class="success">Canada</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="thing-showcase framed-box-small">
+			<h2 id="section_progress_bars">Progress and meter bars<sup>[<a href="#section_progress_bars">#</a>]</sup></h2>
+			<p>Indeterminate progress bar (no "value" attribute)</p>
+			<progress max="100"></progress> <progress class="danger" min="0" max="100"></progress> <progress class="warning" min="0" max="100"></progress> <progress class="success" min="0" max="100"></progress>
+			<p>Progress bar at 0%</p>
+			<progress max="100" value="0"></progress> <progress class="danger" min="0" max="100" value="0"></progress> <progress class="warning" min="0" max="100" value="0"></progress> <progress class="success" min="0" max="100" value="0"></progress>
+			<p>Progress bar at 40%</p>
+			<progress max="100" value="40"></progress> <progress class="danger" min="0" max="100" value="40"></progress> <progress class="warning" min="0" max="100" value="40"></progress> <progress class="success" min="0" max="100" value="40"></progress>
+			<p>Progress bar at 100%</p>
+			<progress max="100" value="100"></progress> <progress class="danger" min="0" max="100" value="100"></progress> <progress class="warning" min="0" max="100" value="100"></progress> <progress class="success" min="0" max="100" value="100"></progress>
+			
+			<p>There's also the &lt;meter&gt; element which colours itself based on the value </p>
+			<meter min="0" max="100" low="30" high="70" optimum="90" value="20"></meter>
+			<meter min="0" max="100" low="30" high="70" optimum="90" value="50"></meter>
+			<meter min="0" max="100" low="30" high="70" optimum="90" value="80"></meter>
+			<p>Animated example</p>
+			<meter id="meter_example_1" min="0" max="100" low="30" high="70" optimum="90" value="0"></meter>
+			<script>
+				(() => {
+					let direction = 2;
+					let fillValue = 0;
+					setInterval(() => {
+						window.meter_example_1.value = fillValue;
+						fillValue += direction;
+						if (fillValue == 100) {
+							direction = -2;
+						} else if (fillValue == 0) {
+							direction = 2;
+						}
+					}, 50);
+				})();
+			</script>
+			<p>There's also a custom &lt;progress-stacked&gt; element which can have &lt;progress-stacked-fill&gt; children</p>
+			<progress-stacked max="100">
+				<progress-stacked-fill class="danger" value="15"></progress-stacked-fill>
+				<progress-stacked-fill class="warning" value="20"></progress-stacked-fill>
+				<progress-stacked-fill class="success" value="25"></progress-stacked-fill>
+				<progress-stacked-fill class="primary" value="20"></progress-stacked-fill>
+				<progress-stacked-fill value="10"></progress-stacked-fill>
+			</progress-stacked>
+			<progress-stacked class="danger" max="100">
+				<progress-stacked-fill class="danger" value="15"></progress-stacked-fill>
+				<progress-stacked-fill class="warning" value="20"></progress-stacked-fill>
+				<progress-stacked-fill class="success" value="25"></progress-stacked-fill>
+				<progress-stacked-fill class="primary" value="20"></progress-stacked-fill>
+				<progress-stacked-fill value="10"></progress-stacked-fill>
+			</progress-stacked>
+			<progress-stacked class="warning" max="100">
+				<progress-stacked-fill class="danger" value="15"></progress-stacked-fill>
+				<progress-stacked-fill class="warning" value="20"></progress-stacked-fill>
+				<progress-stacked-fill class="success" value="25"></progress-stacked-fill>
+				<progress-stacked-fill class="primary" value="20"></progress-stacked-fill>
+				<progress-stacked-fill value="10"></progress-stacked-fill>
+			</progress-stacked>
+			<progress-stacked class="success" max="100">
+				<progress-stacked-fill class="danger" value="15"></progress-stacked-fill>
+				<progress-stacked-fill class="warning" value="20"></progress-stacked-fill>
+				<progress-stacked-fill class="success" value="25"></progress-stacked-fill>
+				<progress-stacked-fill class="primary" value="20"></progress-stacked-fill>
+				<progress-stacked-fill value="10"></progress-stacked-fill>
+			</progress-stacked>
+			<p>If it has no children, it will look like an indeterminate progress bar</p>
+			<progress-stacked max="100">
+			</progress-stacked>
+			<progress-stacked class="danger" max="100">
+			</progress-stacked>
+			<progress-stacked class="warning" max="100">
+			</progress-stacked>
+			<progress-stacked class="success" max="100">
+			</progress-stacked>
+		</div>
+		<div class="thing-showcase framed-box-small">
 			<h2 id="section_loading">Loading spinners<sup>[<a href="#section_loading">#</a>]</sup></h2>
 			<p>Images with the "loading-spinner" class use the loading spinner image</p>
 			<img class="loading-spinner" width="64">
