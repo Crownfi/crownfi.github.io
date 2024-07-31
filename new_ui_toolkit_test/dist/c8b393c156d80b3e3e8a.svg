@@ -11,6 +11,11 @@
 				0% { transform: rotate(0deg); }
 				100% { transform: rotate(360deg); }
 			}
+			@keyframes pulse {
+				0% { filter: opacity(1); }
+				50% { filter: opacity(0.6); }
+				100% { filter: opacity(1); }
+			}
 			.fill-gradient {
 				width: 128px; height: 128px;
 				background: conic-gradient(#FCAC6A00, #FCAC6A);
@@ -20,8 +25,30 @@
 				animation: rotate 1.25s linear 0s infinite normal;
 				transform-origin: center;
 			}
+			#danger:target ~ g .fill-gradient {
+				background: conic-gradient(#FFADAD 0deg, #FF7474 180deg, #FFADAD 360deg);
+			}
+			#danger:target ~ g .fill-rotate {
+				animation: pulse 1.25s ease-in-out 0s infinite normal, rotate 12.5s linear 0s infinite normal;
+			}
+			#warning:target ~ g .fill-gradient {
+				background: conic-gradient(#FFBA3300, #E4BF77);
+			}
+			#warning:target ~ g .fill-rotate {
+				animation: pulse 1.25s ease-in-out 0s infinite normal, rotate 2.5s linear 0s infinite normal;
+			}
+			#success:target ~ g .fill-gradient {
+				background: conic-gradient(#B7FF6F 0deg, #66CC00 180deg, #B7FF6F 360deg);
+			}
+			#success:target ~ g .fill-rotate {
+				animation: rotate 12.5s linear 0s infinite normal;
+			}
 		</style>
 	</defs>
+	<g id="danger" />
+	<g id="warning" />
+	<g id="success" />
+	<g />
 	<g clip-path="url(#clip)">
 		<g class="fill-rotate">
 			<foreignObject x="0" y="0" width="128" height="128">

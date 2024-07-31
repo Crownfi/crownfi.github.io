@@ -133,6 +133,26 @@
 		<div class="test-boxes framed-box-small">*.framed-box-small</div>
 		<div class="test-boxes rounded-box-smooth">*.rounded-box-smooth</div>
 		<div class="test-boxes rounded-box">*.rounded-box</div>
+		<div class="test-boxes square-box-smooth">*.square-box-smooth</div>
+		<div class="test-boxes square-box">*.square-box</div>
+
+		<div class="test-boxes rounded-box border-primary">*.rounded-box.border-primary</div>
+		<div class="test-boxes rounded-box border-danger">*.rounded-box.border-danger</div>
+		<div class="test-boxes rounded-box border-warning">*.rounded-box.border-warning</div>
+		<div class="test-boxes rounded-box border-success">*.rounded-box.border-success</div>
+		<div class="test-boxes rounded-box-smooth border-primary">*.rounded-box-smooth.border-primary</div>
+		<div class="test-boxes rounded-box-smooth border-danger">*.rounded-box-smooth.border-danger</div>
+		<div class="test-boxes rounded-box-smooth border-warning">*.rounded-box-smooth.border-warning</div>
+		<div class="test-boxes rounded-box-smooth border-success">*.rounded-box-smooth.border-success</div>
+
+		<div class="test-boxes square-box border-primary">*.square-box.border-primary</div>
+		<div class="test-boxes square-box border-danger">*.square-box.border-danger</div>
+		<div class="test-boxes square-box border-warning">*.square-box.border-warning</div>
+		<div class="test-boxes square-box border-success">*.square-box.border-success</div>
+		<div class="test-boxes square-box-smooth border-primary">*.square-box-smooth.border-primary</div>
+		<div class="test-boxes square-box-smooth border-danger">*.square-box-smooth.border-danger</div>
+		<div class="test-boxes square-box-smooth border-warning">*.square-box-smooth.border-warning</div>
+		<div class="test-boxes square-box-smooth border-success">*.square-box-smooth.border-success</div>
 
 		<div class="thing-showcase framed-box-small">
 			<h2 id="section_important_note">Important notes<sup>[<a href="#section_important_note">#</a>]</sup></h2>
@@ -330,6 +350,7 @@
 			<div class="framed-box-small thing-showcase">
 				<h2 id="section_context_menus">Context menus!<sup>[<a href="#section_context_menus">#</a>]</sup></h2>
 				<p>Right click on this thing to look at the context menu!</p>
+				<p>Note that the &lt;hr&gt; element has the "gems" class, this is a smaller, more subtle &lt;hr&gt; that looks better in menus</p>
 			</div>
 			<dropdown-menu linked-elements="*:has(+ #this)">
 				<dropdown-menu-item><span>Dropdown menu!</span></dropdown-menu-item>
@@ -349,7 +370,7 @@
 						<dropdown-menu-item><span>An option with lots of text and if you're on mobile it will probably overflow</span></dropdown-menu-item>
 					</dropdown-menu-inner>
 				</dropdown-menu-item>
-				<hr>
+				<hr class="gems">
 				<dropdown-menu-item value="5">ONE MORE THING</dropdown-menu-item>
 			</dropdown-menu>
 		</form>
